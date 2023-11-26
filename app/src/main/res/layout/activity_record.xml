@@ -12,7 +12,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="center"
-        android:text="Question Part"
+        android:text="@string/question_part"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/record_part"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,7 +36,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="点击这里开始录音"
+            android:text="@string/tap_to_record"
             android:layout_gravity="center" />
     </FrameLayout>
 
@@ -46,6 +46,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="?android:attr/windowBackground"
+        app:itemIconTint="@color/nav_text_colors"
+        app:itemTextColor="@color/nav_text_colors"
+        app:labelVisibilityMode="labeled"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"

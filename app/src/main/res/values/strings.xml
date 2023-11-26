@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">Wattson</string>
-    <string name="record" />
-    <string name="history" />
-    <string name="library" />
-    <string name="account" />
+    <string name="record">Record</string>
+    <string name="history">History</string>
+    <string name="library">Library</string>
+    <string name="account">Account</string>
+    <string name="tap_to_record">Tap To Record</string>
+    <string name="question_part">Question Part</string>
 </resources>
