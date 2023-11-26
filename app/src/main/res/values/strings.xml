@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Wattson</string>
+    <string name="record" />
+    <string name="history" />
+    <string name="library" />
+    <string name="account" />
+</resources>

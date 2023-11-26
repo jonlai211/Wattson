@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_record"
+        android:title="@string/record" />
+    <item
+        android:id="@+id/navigation_history"
+        android:title="@string/history" />
+    <item
+        android:id="@+id/navigation_library"
+        android:title="@string/library" />
+    <item
+        android:id="@+id/navigation_account"
+        android:title="@string/account" />
+</menu>
