@@ -15,7 +15,7 @@ public class RecordActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_record);
 
-        audioManager = new AudioManager();
+        audioManager = new AudioManager(this);
         textTranscriptionManager = new TextTranscriptionManager();
     }
 
