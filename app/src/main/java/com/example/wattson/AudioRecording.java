@@ -11,11 +11,13 @@ public class AudioRecording {
     private String fileName;
     private String filePath;
     private long duration;
+    private boolean isRecording;
 
-    public AudioRecording(String fileName, String filePath, long duration) {
+    public AudioRecording(String fileName, String filePath, long duration, boolean isRecording) {
         this.fileName = fileName;
         this.filePath = filePath;
         this.duration = duration;
+        this.isRecording = isRecording;
     }
 
     public String getFileName() {
@@ -40,6 +42,14 @@ public class AudioRecording {
 
     public void setDuration(long duration) {
         this.duration = duration;
+    }
+
+    public boolean isRecording() {
+        return isRecording;
+    }
+
+    public void setRecording(boolean recordingStatus) {
+        isRecording = recordingStatus;
     }
 
     @SuppressLint("DefaultLocale")

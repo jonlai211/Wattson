@@ -3,6 +3,7 @@ package com.example.wattson;
 import android.content.Context;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
+import android.util.Log;
 
 import java.io.File;
 import java.io.IOException;
@@ -15,7 +16,6 @@ public class AudioManager {
     private MediaPlayer mediaPlayer;
     private String currentRecordingPath;
     private Context context;
-    private boolean isRecording = false;
     private long recordingStartTime, recordingEndTime;
 
     public AudioManager(Context context) {
@@ -23,6 +23,13 @@ public class AudioManager {
     }
 
     public AudioRecording startRecording() {
+        Log.d("AudioManager", "Begin recording");
+        if (mediaRecorder != null) {
+            mediaRecorder.stop();
+            mediaRecorder.release();
+            mediaRecorder = null;
+        }
+
         File directory = context.getExternalFilesDir(null);
         if (directory == null) {
             // Deal with error like UIHelper show toast
@@ -38,34 +45,54 @@ public class AudioManager {
         mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
         mediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
         mediaRecorder.setOutputFile(currentRecordingPath);
-        isRecording = true;
+        try {
+            mediaRecorder.prepare();
+            mediaRecorder.start();
+            Log.i("AudioManager", "Start recording successfully");
+        } catch (IOException e) {
+            Log.e("AudioManager", "Start recording failed", e);
+        }
+
         recordingStartTime = System.currentTimeMillis();
 
-        return new AudioRecording(fileName, currentRecordingPath, 0);
+        return new AudioRecording(fileName, currentRecordingPath, 0, true);
     }
 
     public void stopRecording(AudioRecording recording) {
-        mediaRecorder.stop();
-        mediaRecorder.release();
-        mediaRecorder = null;
-        isRecording = false;
-        //TODO: test "update recording duration"
         long recordingEndTime = System.currentTimeMillis();
         long duration = recordingEndTime - recordingStartTime;
-        recording.setDuration(duration);
-    }
 
-    public void pauseRecording() {
-        if (mediaRecorder != null) {
-            mediaRecorder.pause();
-            isRecording = false;
+        if (mediaRecorder != null && duration > 1000) {
+            try {
+                mediaRecorder.stop();
+                Log.d("AudioManager", "Stop recording successfully");
+            } catch (IllegalStateException e) {
+                Log.e("AudioManager", "Stop recording failed", e);
+            } finally {
+                mediaRecorder.release();
+                mediaRecorder = null;
+            }
+
+            if (recording != null) {
+                recording.setDuration(duration);
+                recording.setRecording(false);
+            }
         }
     }
 
-    public void resumeRecording() {
+    public void pauseRecording(AudioRecording recording) {
+        if (mediaRecorder != null) {
+            mediaRecorder.pause();
+            recording.setRecording(false);
+            Log.d("AudioManager", "Pause recording successfully");
+        }
+    }
+
+    public void resumeRecording(AudioRecording recording) {
         if (mediaRecorder != null) {
             mediaRecorder.resume();
-            isRecording = true;
+            recording.setRecording(true);
+            Log.d("AudioManager", "Resume recording successfully");
         }
     }
 
