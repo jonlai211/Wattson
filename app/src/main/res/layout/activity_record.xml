@@ -98,7 +98,8 @@
             android:layout_weight="1"
             android:src="@drawable/baseline_delete_24"
             android:background="@drawable/button_border"
-            android:contentDescription="@string/delete"/>
+            android:contentDescription="@string/delete"
+            android:onClick="onDeleteButtonClick"/>
 
         <ImageButton
             android:id="@+id/audio_to_text_button"

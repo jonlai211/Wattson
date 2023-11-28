@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -111,6 +112,39 @@ public class RecordActivity extends AppCompatActivity {
     public void onTranscribeButtonClick(View view) {
         Transcription transcription = textTranscriptionManager.transcribeAudio(currentRecording);
         // 显示转录文本
+    }
+
+    public void onDeleteButtonClick(View view) {
+        UIHelpers.showConfirmationDialog(this, "Delete Recording",
+                "Are you sure you want to delete this recording?",
+                new UIHelpers.ConfirmationDialogListener() {
+                    @Override
+                    public void onConfirmed() {
+                        deleteRecording();
+                    }
+
+                    @Override
+                    public void onCancelled() {
+                        Log.d("RecordActivity", "Deletion cancelled");
+                    }
+                });
+    }
+
+    private void deleteRecording() {
+        if (currentRecording != null && currentRecording.getFilePath() != null) {
+            boolean isDeleted = audioManager.deleteRecording(currentRecording.getFilePath());
+
+            if (isDeleted) {
+                resetRecordingState();
+                Log.d("RecordActivity", "Delete recording successfully");
+                Toast.makeText(this, "Recording deleted successfully", Toast.LENGTH_SHORT).show();
+            } else {
+                Log.d("RecordActivity", "Failed to delete recording");
+                Toast.makeText(this, "Failed to delete recording", Toast.LENGTH_SHORT).show();
+            }
+        } else {
+            Log.d("RecordActivity", "No recording to delete");
+        }
     }
 
     public void onNextButtonClick(View view) {
