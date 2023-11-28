@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,6 +24,7 @@ public class RecordActivity extends AppCompatActivity {
     private AudioRecording currentRecording;
     private static final int REQUEST_RECORD_AUDIO_PERMISSION = 200;
     private boolean isRecordingStarted = false;
+    private boolean isPlaying = false;
     private Handler handler = new Handler();
     private Runnable updateRecordingTimeRunnable = new Runnable() {
         @Override
@@ -54,6 +56,13 @@ public class RecordActivity extends AppCompatActivity {
 
         audioManager = new AudioManager(this);
         textTranscriptionManager = new TextTranscriptionManager();
+
+        audioManager.setPlaybackCompletionListener(new AudioManager.PlaybackCompletionListener() {
+            @Override
+            public void onPlaybackComplete() {
+                handlePlaybackCompletion();
+            }
+        });
     }
 
     public void onRecordButtonClick(View view) {
@@ -109,12 +118,48 @@ public class RecordActivity extends AppCompatActivity {
         return false;
     }
 
+    public void onPlayButtonClick(View view) {
+        ImageButton playButton = findViewById(R.id.play_button);
+
+        if (currentRecording != null && currentRecording.getFilePath() != null) {
+            if (!isPlaying) {
+                audioManager.playRecording(currentRecording.getFilePath());
+                playButton.setImageResource(R.drawable.baseline_pause_24);
+                isPlaying = true;
+            } else {
+                audioManager.pausePlayback();
+                playButton.setImageResource(R.drawable.baseline_play_arrow_24);
+                isPlaying = false;
+            }
+        }
+    }
+
+    private void handlePlaybackCompletion() {
+        isPlaying = false;
+        ImageButton playButton = findViewById(R.id.play_button);
+        playButton.setImageResource(R.drawable.baseline_play_arrow_24);
+    }
+
+    private void pausePlaybackIfNeeded() {
+        ImageButton playButton = findViewById(R.id.play_button);
+
+        if (isPlaying) {
+            audioManager.pausePlayback();
+            playButton.setImageResource(R.drawable.baseline_play_arrow_24);
+            isPlaying = false;
+        }
+    }
+
+    public void onNoteButtonClick(View view) {
+        pausePlaybackIfNeeded();
+    }
+
     public void onTranscribeButtonClick(View view) {
-        Transcription transcription = textTranscriptionManager.transcribeAudio(currentRecording);
-        // 显示转录文本
+        pausePlaybackIfNeeded();
     }
 
     public void onDeleteButtonClick(View view) {
+        pausePlaybackIfNeeded();
         UIHelpers.showConfirmationDialog(this, "Delete Recording",
                 "Are you sure you want to delete this recording?",
                 new UIHelpers.ConfirmationDialogListener() {
@@ -148,6 +193,8 @@ public class RecordActivity extends AppCompatActivity {
     }
 
     public void onNextButtonClick(View view) {
+        audioManager.stopPlayback();
+        pausePlaybackIfNeeded();
         resetRecordingState();
     }
 

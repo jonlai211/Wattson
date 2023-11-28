@@ -19,6 +19,8 @@ public class AudioManager {
     private long recordingStartTime;
     private long pausedDuration = 0;
     private long lastPauseTime = 0;
+    private boolean isPaused = false;
+    private PlaybackCompletionListener playbackCompletionListener;
 
     public AudioManager(Context context) {
         this.context = context;
@@ -103,23 +105,63 @@ public class AudioManager {
         }
     }
 
+    public interface PlaybackCompletionListener {
+        void onPlaybackComplete();
+    }
+
+    public void setPlaybackCompletionListener(PlaybackCompletionListener listener) {
+        this.playbackCompletionListener = listener;
+    }
+
     public void playRecording(String filePath) {
-        if (mediaPlayer != null) {
-            mediaPlayer.release();
-        }
-        mediaPlayer = new MediaPlayer();
         try {
-            mediaPlayer.setDataSource(filePath);
-            mediaPlayer.prepare();
-            mediaPlayer.start();
+            if (mediaPlayer == null) {
+                mediaPlayer = new MediaPlayer();
+                mediaPlayer.setDataSource(filePath);
+                mediaPlayer.prepare();
+                mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+                        // handle playback completion
+                        cleanupMediaPlayer();
+                    }
+                });
+            }
+
+            if (isPaused) {
+                resumePlayback(); // start from where it was paused
+            } else {
+                mediaPlayer.start(); // start from beginning
+                isPaused = false;
+            }
         } catch (IOException e) {
             e.printStackTrace();
+            cleanupMediaPlayer();
         }
     }
 
     public void pausePlayback() {
         if (mediaPlayer != null && mediaPlayer.isPlaying()) {
             mediaPlayer.pause();
+            isPaused = true;
+        }
+    }
+
+    public void resumePlayback() {
+        if (mediaPlayer != null && isPaused) {
+            mediaPlayer.start();
+            isPaused = false;
+        }
+    }
+
+    private void cleanupMediaPlayer() {
+        if (mediaPlayer != null) {
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
+        isPaused = false;
+        if (playbackCompletionListener != null) {
+            playbackCompletionListener.onPlaybackComplete();
         }
     }
 
@@ -134,6 +176,7 @@ public class AudioManager {
     }
 
     public boolean deleteRecording(String filePath) {
+        stopPlayback();
         return new File(filePath).delete(); // returns true if deleted successfully
     }
 

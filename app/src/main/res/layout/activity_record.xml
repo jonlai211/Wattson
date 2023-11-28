@@ -80,7 +80,8 @@
             android:layout_weight="1"
             android:src="@drawable/baseline_play_arrow_24"
             android:background="@drawable/button_border"
-            android:contentDescription="@string/play" />
+            android:contentDescription="@string/play"
+            android:onClick="onPlayButtonClick"/>
 
         <ImageButton
             android:id="@+id/note_button"
@@ -89,7 +90,8 @@
             android:layout_weight="1"
             android:src="@drawable/baseline_edit_note_24"
             android:background="@drawable/button_border"
-            android:contentDescription="@string/notes"/>
+            android:contentDescription="@string/notes"
+            android:onClick="onNoteButtonClick"/>
 
         <ImageButton
             android:id="@+id/delete_button"
@@ -108,7 +110,8 @@
             android:layout_weight="1"
             android:src="@drawable/baseline_text_format_24"
             android:background="@drawable/button_border"
-            android:contentDescription="@string/audio_to_text"/>
+            android:contentDescription="@string/audio_to_text"
+            android:onClick="onTranscribeButtonClick"/>
 
         <ImageButton
             android:id="@+id/next_question_button"
