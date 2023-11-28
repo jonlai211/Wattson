@@ -28,21 +28,20 @@
         android:clickable="true"
         android:focusable="true"
         android:onClick="onRecordButtonClick"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/navigation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/question_part"
+        app:layout_constraintBottom_toTopOf="@id/navigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintVertical_weight="2">
 
         <TextView
             android:id="@+id/record_status_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center_horizontal"
             android:text="@string/tap_to_record"
-            android:textAlignment="center" />
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:layout_gravity="center" />
 
         <!-- TextView for Displaying Recording Time -->
         <TextView
@@ -51,64 +50,71 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|top"
             android:layout_marginTop="20dp"
-            android:text="@string/_00_00"
-            android:textColor="#6200EE"
             android:textSize="18sp"
-            android:visibility="invisible" />
+            android:textColor="#6200EE"
+            android:visibility="invisible"
+            android:text="@string/_00_00" />
+
+        <!--TODO: Redesign the ImageButton and layout better-->
+        <LinearLayout
+            android:id="@+id/control_panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/navigation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageButton
+                android:id="@+id/play_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/baseline_play_arrow_24"
+                android:background="@drawable/button_border"
+                android:contentDescription="@string/play" />
+
+            <ImageButton
+                android:id="@+id/note_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/baseline_edit_note_24"
+                android:background="@drawable/button_border"
+                android:contentDescription="@string/notes"/>
+
+            <ImageButton
+                android:id="@+id/delete_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/baseline_delete_24"
+                android:background="@drawable/button_border"
+                android:contentDescription="@string/delete"/>
+
+            <ImageButton
+                android:id="@+id/audio_to_text_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/baseline_text_format_24"
+                android:background="@drawable/button_border"
+                android:contentDescription="@string/audio_to_text"/>
+
+            <ImageButton
+                android:id="@+id/next_question_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/baseline_navigate_next_24"
+                android:background="@drawable/button_border"
+                android:contentDescription="@string/next"/>
+        </LinearLayout>
 
     </FrameLayout>
-
-    <!-- Control Part -->
-    <!--TODO: Redesign the ImageButton and layout better-->
-    <LinearLayout
-        android:id="@+id/control_panel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:visibility="gone"
-        app:layout_constraintTop_toBottomOf="@id/question_part"
-        app:layout_constraintBottom_toTopOf="@id/navigation"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintVertical_weight="2">
-
-        <ImageButton
-            android:id="@+id/play_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/baseline_play_arrow_24"
-            android:contentDescription="@string/play" />
-
-        <ImageButton
-            android:id="@+id/note_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/baseline_edit_note_24"
-            android:contentDescription="@string/notes"/>
-
-        <ImageButton
-            android:id="@+id/delete_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/baseline_delete_24"
-            android:contentDescription="@string/delete"/>
-
-        <ImageButton
-            android:id="@+id/audio_to_text_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/baseline_text_format_24"
-            android:contentDescription="@string/audio_to_text"/>
-
-        <ImageButton
-            android:id="@+id/next_question_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/baseline_navigate_next_24"
-            android:contentDescription="@string/next"/>
-    </LinearLayout>
 
     <!-- Bottom Navigation -->
     <com.google.android.material.bottomnavigation.BottomNavigationView

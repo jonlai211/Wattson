@@ -113,6 +113,46 @@ public class RecordActivity extends AppCompatActivity {
         // 显示转录文本
     }
 
+    public void onNextButtonClick(View view) {
+        resetRecordingState();
+    }
+
+    private void resetRecordingState() {
+        // Reset UI
+        TextView recordStatusText = findViewById(R.id.record_status_text);
+        TextView recordingTimeView = findViewById(R.id.recording_time_text);
+        recordStatusText.setText(R.string.tap_to_record);
+        recordingTimeView.setVisibility(View.INVISIBLE);
+        recordStatusText.setVisibility(View.VISIBLE);
+
+        // Reset record part to be clickable
+        FrameLayout recordPart = findViewById(R.id.record_part);
+        recordPart.setClickable(true);
+        recordPart.setFocusable(true);
+        recordPart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onRecordButtonClick(v);
+            }
+        });
+        recordPart.setVisibility(View.VISIBLE);
+
+        // Hide control panel
+        LinearLayout controlPanel = findViewById(R.id.control_panel);
+        controlPanel.setVisibility(View.GONE);
+
+        // Clear recording time
+        handler.removeCallbacks(updateRecordingTimeRunnable);
+
+        // Reset recording state
+        isRecordingStarted = false;
+
+        // Set currentRecording to null
+        currentRecording = null;
+
+        Log.d("RecordActivity", "Reset recording state");
+    }
+
     // Other UI related methods
     private void updateRecordingTime(long millis) {
         TextView recordingTimeView = findViewById(R.id.recording_time_text);
