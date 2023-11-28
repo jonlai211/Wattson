@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -89,6 +90,9 @@ public class RecordActivity extends AppCompatActivity {
             TextView recordStatusText = findViewById(R.id.record_status_text);
             recordStatusText.setText(R.string.test_show_finish);
             recordingTimeView.setVisibility(View.INVISIBLE);
+            recordStatusText.setVisibility(View.INVISIBLE);
+            LinearLayout controlPanel = findViewById(R.id.control_panel);
+            controlPanel.setVisibility(View.VISIBLE);
             handler.removeCallbacks(updateRecordingTimeRunnable);
             Log.d("RecordActivity", "Long click on record button");
             return true;
