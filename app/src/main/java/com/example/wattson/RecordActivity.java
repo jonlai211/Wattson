@@ -91,8 +91,16 @@ public class RecordActivity extends AppCompatActivity {
             recordStatusText.setText(R.string.test_show_finish);
             recordingTimeView.setVisibility(View.INVISIBLE);
             recordStatusText.setVisibility(View.INVISIBLE);
+
+            FrameLayout recordPart = findViewById(R.id.record_part);
+            recordPart.setClickable(false);
+            recordPart.setFocusable(false);
+            recordPart.setOnClickListener(null);
+            recordPart.setVisibility(View.INVISIBLE);
+
             LinearLayout controlPanel = findViewById(R.id.control_panel);
             controlPanel.setVisibility(View.VISIBLE);
+
             handler.removeCallbacks(updateRecordingTimeRunnable);
             Log.d("RecordActivity", "Long click on record button");
             return true;
