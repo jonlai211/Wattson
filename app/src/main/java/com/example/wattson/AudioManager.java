@@ -16,7 +16,9 @@ public class AudioManager {
     private MediaPlayer mediaPlayer;
     private String currentRecordingPath;
     private Context context;
-    private long recordingStartTime, recordingEndTime;
+    private long recordingStartTime;
+    private long pausedDuration = 0;
+    private long lastPauseTime = 0;
 
     public AudioManager(Context context) {
         this.context = context;
@@ -54,13 +56,14 @@ public class AudioManager {
         }
 
         recordingStartTime = System.currentTimeMillis();
+        pausedDuration = 0;
 
         return new AudioRecording(fileName, currentRecordingPath, 0, true);
     }
 
     public void stopRecording(AudioRecording recording) {
         long recordingEndTime = System.currentTimeMillis();
-        long duration = recordingEndTime - recordingStartTime;
+        long duration = recordingEndTime - recordingStartTime - pausedDuration;
 
         if (mediaRecorder != null && duration > 1000) {
             try {
@@ -85,6 +88,8 @@ public class AudioManager {
             mediaRecorder.pause();
             recording.setRecording(false);
             Log.d("AudioManager", "Pause recording successfully");
+
+            lastPauseTime = System.currentTimeMillis();
         }
     }
 
@@ -93,6 +98,8 @@ public class AudioManager {
             mediaRecorder.resume();
             recording.setRecording(true);
             Log.d("AudioManager", "Resume recording successfully");
+
+            pausedDuration += System.currentTimeMillis() - lastPauseTime;
         }
     }
 
@@ -128,6 +135,14 @@ public class AudioManager {
 
     public boolean deleteRecording(String filePath) {
         return new File(filePath).delete(); // returns true if deleted successfully
+    }
+
+    public long getRecordingStartTime() {
+        return recordingStartTime;
+    }
+
+    public long getPausedDuration() {
+        return pausedDuration;
     }
 
 }
