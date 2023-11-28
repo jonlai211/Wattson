@@ -52,6 +52,7 @@
             android:layout_marginTop="20dp"
             android:textSize="18sp"
             android:textColor="#6200EE"
+            android:visibility="invisible"
             android:text="00:00" />
     </FrameLayout>
 

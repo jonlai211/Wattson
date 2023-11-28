@@ -56,11 +56,13 @@ public class RecordActivity extends AppCompatActivity {
 
     public void onRecordButtonClick(View view) {
         TextView recordStatusText = findViewById(R.id.record_status_text);
+        TextView recordingTimeView = findViewById(R.id.recording_time_text);
 
         if (!isRecordingStarted) {
             currentRecording = audioManager.startRecording();
             isRecordingStarted = true;
             recordStatusText.setText(R.string.tap_to_pause);
+            recordingTimeView.setVisibility(View.VISIBLE);
             handler.post(updateRecordingTimeRunnable);
         } else if (currentRecording != null && currentRecording.isRecording()) {
             audioManager.pauseRecording(currentRecording);
@@ -77,6 +79,8 @@ public class RecordActivity extends AppCompatActivity {
     }
 
     public boolean onRecordButtonLongClick(View view) {
+        TextView recordingTimeView = findViewById(R.id.recording_time_text);
+
         if (isRecordingStarted && currentRecording != null && !currentRecording.isRecording()) {
             audioManager.stopRecording(currentRecording);
             currentRecording.setRecording(false);
@@ -84,6 +88,7 @@ public class RecordActivity extends AppCompatActivity {
 
             TextView recordStatusText = findViewById(R.id.record_status_text);
             recordStatusText.setText(R.string.test_show_finish);
+            recordingTimeView.setVisibility(View.INVISIBLE);
             handler.removeCallbacks(updateRecordingTimeRunnable);
             Log.d("RecordActivity", "Long click on record button");
             return true;
