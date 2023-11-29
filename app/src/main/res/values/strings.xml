@@ -15,4 +15,7 @@
     <string name="audio_to_text">Audio to Text</string>
     <string name="next">Next</string>
     <string name="_00_00">00:00</string>
+    <string name="history_content">History Content</string>
+    <string name="library_content">Library Content</string>
+    <string name="account_content">Account Content</string>
 </resources>

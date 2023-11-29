@@ -20,7 +20,6 @@
         android:theme="@style/Theme.Wattson"
         tools:targetApi="31">
 
-        <!-- 声明 RecordActivity -->
         <activity android:name=".RecordActivity"
             android:exported="true">
             <intent-filter>
@@ -29,7 +28,9 @@
             </intent-filter>
         </activity>
 
-        <!-- 其他活动的声明 -->
+        <activity android:name=".HistoryActivity"/>
+        <activity android:name=".LibraryActivity"/>
+        <activity android:name=".AccountActivity"/>
 
     </application>
 </manifest>

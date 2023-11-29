@@ -1,10 +1,12 @@
 package com.example.wattson;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
@@ -13,9 +15,12 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.Locale;
 
@@ -65,19 +70,19 @@ public class RecordActivity extends AppCompatActivity {
             }
         });
 
-        // 初始化 SeekBar
+        // Init SeekBar
         SeekBar seekBar = findViewById(R.id.seek_bar);
-        seekBar.setMax(100); // 假设最大值为 100，需要根据实际音频长度调整
-        seekBar.setProgress(0); // 初始进度为 0
+        seekBar.setMax(100); // Assume the duration of the recording is 100 seconds
+        seekBar.setProgress(0); // Init progress to 0
 
-        // 设置播放完成监听器
+        // Set SeekBar change listener
         audioManager.setPlaybackCompletionListener(new AudioManager.PlaybackCompletionListener() {
             @Override
             public void onPlaybackComplete() {
                 isPlaying = false;
                 ImageButton playButton = findViewById(R.id.play_button);
                 playButton.setImageResource(R.drawable.baseline_play_arrow_24);
-                seekBar.setProgress(0); // 重置进度条
+                seekBar.setProgress(0); // Reset progress to 0
             }
         });
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -94,12 +99,35 @@ public class RecordActivity extends AppCompatActivity {
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-                // 可选：当用户开始拖动 SeekBar 时的操作
+                // Optional: When user starts to drag the SeekBar
             }
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                // 可选：当用户停止拖动 SeekBar 时的操作
+                // Optional: When user stops dragging the SeekBar
+            }
+        });
+
+        // Bottom Navigation
+        BottomNavigationView navView = findViewById(R.id.navigation);
+        navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int itemId = item.getItemId();
+
+                if (itemId == R.id.navigation_record) {
+                    return true;
+                } else if (itemId == R.id.navigation_history) {
+                    startActivity(new Intent(RecordActivity.this, HistoryActivity.class));
+                    return true;
+                } else if (itemId == R.id.navigation_library) {
+                    startActivity(new Intent(RecordActivity.this, LibraryActivity.class));
+                    return true;
+                } else if (itemId == R.id.navigation_account) {
+                    startActivity(new Intent(RecordActivity.this, AccountActivity.class));
+                    return true;
+                }
+                return false;
             }
         });
     }
@@ -125,7 +153,7 @@ public class RecordActivity extends AppCompatActivity {
             recordStatusText.setText(R.string.tap_to_pause);
             handler.post(updateRecordingTimeRunnable);
         }
-        // 更新UI
+        // Update UI
     }
 
     public boolean onRecordButtonLongClick(View view) {
