@@ -57,6 +57,36 @@
             android:visibility="invisible" />
     </FrameLayout>
 
+    <!-- Seek Bar -->
+    <LinearLayout
+        android:id="@+id/seek_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/question_part"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- TextView for Displaying Playback Time -->
+        <TextView
+            android:id="@+id/playback_time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="18sp"
+            android:textColor="#6200EE"
+            android:text="@string/_00_00"/>
+
+        <!-- Seek Bar -->
+        <SeekBar
+            android:id="@+id/seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
+
     <!-- Control Part -->
     <!--TODO: Redesign the ImageButton and layout better-->
     <LinearLayout

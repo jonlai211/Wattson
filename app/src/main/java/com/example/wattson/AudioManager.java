@@ -1,9 +1,11 @@
 package com.example.wattson;
 
+import android.app.Activity;
 import android.content.Context;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
 import android.util.Log;
+import android.widget.SeekBar;
 
 import java.io.File;
 import java.io.IOException;
@@ -126,6 +128,14 @@ public class AudioManager {
                         cleanupMediaPlayer();
                     }
                 });
+                mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                    @Override
+                    public void onPrepared(MediaPlayer mp) {
+                        SeekBar seekBar = ((Activity) context).findViewById(R.id.seek_bar);
+                        seekBar.setMax(mediaPlayer.getDuration());
+                        mediaPlayer.start();
+                    }
+                });
             }
 
             if (isPaused) {
@@ -186,6 +196,38 @@ public class AudioManager {
 
     public long getPausedDuration() {
         return pausedDuration;
+    }
+
+    public int getCurrentPosition() {
+        if (mediaPlayer != null && mediaPlayer.isPlaying()) {
+            return mediaPlayer.getCurrentPosition();
+        }
+        return 0;
+    }
+
+    public int getDuration() {
+        if (mediaPlayer != null) {
+            return mediaPlayer.getDuration();
+        }
+        return 0;
+    }
+
+    public void seekTo(int progress) {
+        if (mediaPlayer != null) {
+            mediaPlayer.seekTo(progress);
+            if (isPaused) {
+                // 更新 MediaPlayer 的状态，以便在暂停时也能正确反映进度
+                onSeekWhilePaused(progress);
+            }
+        }
+    }
+
+    private void onSeekWhilePaused(int progress) {
+        // 可选：在这里实现在暂停状态下拖动进度条后的逻辑
+        // 例如，更新 UI 上的播放时间等
+        if (context instanceof RecordActivity) {
+            ((RecordActivity) context).updatePlaybackTime(progress);
+        }
     }
 
 }

@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -63,6 +64,44 @@ public class RecordActivity extends AppCompatActivity {
                 handlePlaybackCompletion();
             }
         });
+
+        // 初始化 SeekBar
+        SeekBar seekBar = findViewById(R.id.seek_bar);
+        seekBar.setMax(100); // 假设最大值为 100，需要根据实际音频长度调整
+        seekBar.setProgress(0); // 初始进度为 0
+
+        // 设置播放完成监听器
+        audioManager.setPlaybackCompletionListener(new AudioManager.PlaybackCompletionListener() {
+            @Override
+            public void onPlaybackComplete() {
+                isPlaying = false;
+                ImageButton playButton = findViewById(R.id.play_button);
+                playButton.setImageResource(R.drawable.baseline_play_arrow_24);
+                seekBar.setProgress(0); // 重置进度条
+            }
+        });
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                if (fromUser) {
+                    TextView playbackTimeView = findViewById(R.id.playback_time_text);
+                    String time = formatTime(progress);
+                    playbackTimeView.setText(time);
+
+                    audioManager.seekTo(progress);
+                }
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+                // 可选：当用户开始拖动 SeekBar 时的操作
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                // 可选：当用户停止拖动 SeekBar 时的操作
+            }
+        });
     }
 
     public void onRecordButtonClick(View view) {
@@ -108,6 +147,9 @@ public class RecordActivity extends AppCompatActivity {
             recordPart.setOnClickListener(null);
             recordPart.setVisibility(View.INVISIBLE);
 
+            LinearLayout seekBarLayout = findViewById(R.id.seek_bar_layout);
+            seekBarLayout.setVisibility(View.VISIBLE);
+
             LinearLayout controlPanel = findViewById(R.id.control_panel);
             controlPanel.setVisibility(View.VISIBLE);
 
@@ -120,16 +162,20 @@ public class RecordActivity extends AppCompatActivity {
 
     public void onPlayButtonClick(View view) {
         ImageButton playButton = findViewById(R.id.play_button);
+        LinearLayout seekBarLayout = findViewById(R.id.seek_bar_layout);
 
         if (currentRecording != null && currentRecording.getFilePath() != null) {
             if (!isPlaying) {
                 audioManager.playRecording(currentRecording.getFilePath());
                 playButton.setImageResource(R.drawable.baseline_pause_24);
+                seekBarLayout.setVisibility(View.VISIBLE);
                 isPlaying = true;
+                handler.post(updateSeekBarRunnable);
             } else {
                 audioManager.pausePlayback();
                 playButton.setImageResource(R.drawable.baseline_play_arrow_24);
                 isPlaying = false;
+                handler.removeCallbacks(updateSeekBarRunnable);
             }
         }
     }
@@ -138,6 +184,9 @@ public class RecordActivity extends AppCompatActivity {
         isPlaying = false;
         ImageButton playButton = findViewById(R.id.play_button);
         playButton.setImageResource(R.drawable.baseline_play_arrow_24);
+
+        SeekBar seekBar = findViewById(R.id.seek_bar);
+        seekBar.setProgress(0);
     }
 
     private void pausePlaybackIfNeeded() {
@@ -181,6 +230,7 @@ public class RecordActivity extends AppCompatActivity {
 
             if (isDeleted) {
                 resetRecordingState();
+                resetPlaybackUI();
                 Log.d("RecordActivity", "Delete recording successfully");
                 Toast.makeText(this, "Recording deleted successfully", Toast.LENGTH_SHORT).show();
             } else {
@@ -195,6 +245,7 @@ public class RecordActivity extends AppCompatActivity {
     public void onNextButtonClick(View view) {
         audioManager.stopPlayback();
         pausePlaybackIfNeeded();
+        resetPlaybackUI();
         resetRecordingState();
     }
 
@@ -234,12 +285,43 @@ public class RecordActivity extends AppCompatActivity {
         Log.d("RecordActivity", "Reset recording state");
     }
 
+    private void resetPlaybackUI() {
+        LinearLayout seekBarLayout = findViewById(R.id.seek_bar_layout);
+        SeekBar seekBar = findViewById(R.id.seek_bar);
+        TextView playbackTimeView = findViewById(R.id.playback_time_text);
+
+        seekBar.setProgress(0);
+        playbackTimeView.setText(formatTime(0));
+        seekBarLayout.setVisibility(View.GONE);
+
+        handler.removeCallbacks(updateSeekBarRunnable);
+    }
+
     // Other UI related methods
     private void updateRecordingTime(long millis) {
         TextView recordingTimeView = findViewById(R.id.recording_time_text);
         String time = formatTime(millis);
         recordingTimeView.setText(time);
     }
+
+    public void updatePlaybackTime(int progress) {
+        TextView playbackTimeView = findViewById(R.id.playback_time_text);
+        String time = formatTime(progress);
+        playbackTimeView.setText(time);
+    }
+
+    private Runnable updateSeekBarRunnable = new Runnable() {
+        @Override
+        public void run() {
+            if (isPlaying) {
+                int currentPosition = audioManager.getCurrentPosition();
+                SeekBar seekBar = findViewById(R.id.seek_bar);
+                seekBar.setProgress(currentPosition);
+                updatePlaybackTime(currentPosition);
+                handler.postDelayed(this, 1000);
+            }
+        }
+    };
 
     private String formatTime(long millis) {
         int seconds = (int) (millis / 1000) % 60;
