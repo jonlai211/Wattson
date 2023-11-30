@@ -216,15 +216,12 @@ public class AudioManager {
         if (mediaPlayer != null) {
             mediaPlayer.seekTo(progress);
             if (isPaused) {
-                // 更新 MediaPlayer 的状态，以便在暂停时也能正确反映进度
                 onSeekWhilePaused(progress);
             }
         }
     }
 
     private void onSeekWhilePaused(int progress) {
-        // 可选：在这里实现在暂停状态下拖动进度条后的逻辑
-        // 例如，更新 UI 上的播放时间等
         if (context instanceof RecordActivity) {
             ((RecordActivity) context).updatePlaybackTime(progress);
         }

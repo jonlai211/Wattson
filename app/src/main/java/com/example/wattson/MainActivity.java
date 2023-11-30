@@ -46,12 +46,25 @@ public class MainActivity extends AppCompatActivity {
 
                     // Switch to selected fragment
                     if (selectedFragment != null) {
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                                selectedFragment).commit();
+                        switchFragment(selectedFragment);
                     }
 
                     return true;
                 }
             };
+
+    private void switchFragment(Fragment fragment) {
+        // Check if RecordFragment is currently active
+        Fragment currentFragment = getSupportFragmentManager().findFragmentById(R.id.fragment_container);
+        if (currentFragment instanceof RecordFragment) {
+            ((RecordFragment) currentFragment).stopAndReset();
+        }
+
+        // Switch to selected fragment
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragment_container, fragment)
+                .commit();
+    }
+
 }
 

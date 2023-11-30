@@ -228,7 +228,6 @@ public class RecordFragment extends Fragment {
         return false;
     }
 
-
     public void onPlayButtonClick(View view) {
         ImageButton playButton = getView().findViewById(R.id.play_button);
         LinearLayout seekBarLayout = getView().findViewById(R.id.seek_bar_layout);
@@ -381,6 +380,18 @@ public class RecordFragment extends Fragment {
         seekBarLayout.setVisibility(View.GONE);
 
         handler.removeCallbacks(updateSeekBarRunnable);
+    }
+
+    public void stopAndReset() {
+        if (isPlaying) {
+            audioManager.stopPlayback();
+            pausePlaybackIfNeeded();
+            resetPlaybackUI();
+        }
+        if (isRecordingStarted) {
+            audioManager.stopRecording(currentRecording);
+            resetRecordingState();
+        }
     }
 
     @Override
