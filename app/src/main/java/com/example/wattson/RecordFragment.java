@@ -164,8 +164,6 @@ public class RecordFragment extends Fragment {
         return String.format(Locale.getDefault(), "%02d:%02d", minutes, seconds);
     }
 
-    // 其他方法例如 onRecordButtonClick、onPlayButtonClick 等
-    // 这些方法需要适当地修改以适应 Fragment 的上下文
     public void onRecordButtonClick(View view) {
         TextView recordStatusText = view.findViewById(R.id.record_status_text);
         TextView recordingTimeView = view.findViewById(R.id.recording_time_text);
@@ -397,12 +395,12 @@ public class RecordFragment extends Fragment {
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        // 处理权限请求结果
+        // Handle permission request result
         if (requestCode == REQUEST_RECORD_AUDIO_PERMISSION) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                // 权限被授予
+                // Permission granted
             } else {
-                // 权限被拒绝
+                // Permission denied
             }
         }
     }
