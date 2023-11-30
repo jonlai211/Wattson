@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="selected_nav_colors">#FF6200EE</color>
     <color name="unselected_nav_colors">#FFBABCBE</color>
+    <color name="divider_color">#ddd</color>
 </resources>

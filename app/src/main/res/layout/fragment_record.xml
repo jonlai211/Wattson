@@ -19,6 +19,15 @@
         app:layout_constraintBottom_toTopOf="@id/record_part"
         app:layout_constraintVertical_weight="1" />
 
+    <!-- Divider -->
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider_color"
+        app:layout_constraintTop_toBottomOf="@id/question_part"
+        app:layout_constraintBottom_toTopOf="@id/record_part" />
+
     <!-- Record Part -->
     <FrameLayout
         android:id="@+id/record_part"
