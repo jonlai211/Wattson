@@ -20,7 +20,7 @@
         android:theme="@style/Theme.Wattson"
         tools:targetApi="31">
 
-        <activity android:name=".RecordActivity"
+        <activity android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -28,9 +28,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".HistoryActivity"/>
-        <activity android:name=".LibraryActivity"/>
-        <activity android:name=".AccountActivity"/>
+<!--        <activity android:name=".HistoryActivity"/>-->
+<!--        <activity android:name=".LibraryActivity"/>-->
+<!--        <activity android:name=".AccountActivity"/>-->
 
     </application>
 </manifest>
