@@ -4,6 +4,8 @@ import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -46,6 +48,9 @@ public class RecordFragment extends Fragment {
 
         // Set SeekBar and UI gadgets
         setupUI(view);
+
+        // Display question from database
+        displayQuestionFromDatabase(view);
 
         // Permission check
         if (ContextCompat.checkSelfPermission(getContext(), Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
@@ -290,6 +295,8 @@ public class RecordFragment extends Fragment {
                         @Override
                         public void onConfirmed() {
                             deleteRecording();
+                            View rootView = getView();
+                            displayQuestionFromDatabase(rootView);
                         }
 
                         @Override
@@ -328,6 +335,13 @@ public class RecordFragment extends Fragment {
         pausePlaybackIfNeeded();
         resetPlaybackUI();
         resetRecordingState();
+
+        View rootView = getView();
+        if (rootView != null) {
+            displayQuestionFromDatabase(rootView);
+        } else {
+            Log.e("RecordFragment", "Root view is null in onNextButtonClick");
+        }
     }
 
     private void resetRecordingState() {
@@ -401,6 +415,19 @@ public class RecordFragment extends Fragment {
                 // Permission granted
             } else {
                 // Permission denied
+            }
+        }
+    }
+
+    private void displayQuestionFromDatabase(View view) {
+        String question = DatabaseHelper.getInstance(getContext()).getRandomQuestion();
+        if (question != null) {
+            TextView questionTextView = view.findViewById(R.id.question_part);
+            if (questionTextView != null) {
+                questionTextView.setText(question);
+                Log.d("RecordFragment", "Displaying question: " + question);
+            } else {
+                Log.e("RecordFragment", "Question TextView is null");
             }
         }
     }
