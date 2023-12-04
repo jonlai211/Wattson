@@ -50,7 +50,7 @@ public class RecordFragment extends Fragment {
         setupUI(view);
 
         // Display question from database
-        displayQuestionFromDatabase(view);
+        displayFromDatabase(view);
 
         // Permission check
         if (ContextCompat.checkSelfPermission(getContext(), Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
@@ -296,7 +296,7 @@ public class RecordFragment extends Fragment {
                         public void onConfirmed() {
                             deleteRecording();
                             View rootView = getView();
-                            displayQuestionFromDatabase(rootView);
+                            displayFromDatabase(rootView);
                         }
 
                         @Override
@@ -338,7 +338,7 @@ public class RecordFragment extends Fragment {
 
         View rootView = getView();
         if (rootView != null) {
-            displayQuestionFromDatabase(rootView);
+            displayFromDatabase(rootView);
         } else {
             Log.e("RecordFragment", "Root view is null in onNextButtonClick");
         }
@@ -419,8 +419,13 @@ public class RecordFragment extends Fragment {
         }
     }
 
-    private void displayQuestionFromDatabase(View view) {
-        String question = DatabaseHelper.getInstance(getContext()).getRandomQuestion();
+    private void displayFromDatabase(View view) {
+        // Get the instance of DatabaseHelper
+        DatabaseHelper dbHelper = DatabaseHelper.getInstance(getContext());
+
+        // Get a random question
+        String question = dbHelper.getRandomQuestion();
+
         if (question != null) {
             TextView questionTextView = view.findViewById(R.id.question_part);
             if (questionTextView != null) {
@@ -429,7 +434,24 @@ public class RecordFragment extends Fragment {
             } else {
                 Log.e("RecordFragment", "Question TextView is null");
             }
+
+            String questionId = dbHelper.getQuestionIdByContent(question);
+
+            // Now get the 'part' detail for this question
+            String part = dbHelper.getQuestionDetails(questionId, "part");
+            if (part != null) {
+                TextView partTextView = view.findViewById(R.id.questionPart_part);
+                if (partTextView != null) {
+                    partTextView.setText(part);
+                    Log.d("RecordFragment", "Displaying part: " + part);
+                } else {
+                    Log.e("RecordFragment", "Part TextView is null");
+                }
+            }
         }
+
+        // ... rest of your code ...
     }
+
 
 }

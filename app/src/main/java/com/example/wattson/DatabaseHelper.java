@@ -158,4 +158,52 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.close();
         return question;
     }
+
+    public String getQuestionDetails(String questionId, String detailName) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = null;
+        String detailValue = null;
+
+        try {
+            cursor = db.query("questions", new String[]{detailName}, "id = ?", new String[]{questionId}, null, null, null);
+
+            if (cursor != null && cursor.moveToFirst()) {
+                detailValue = cursor.getString(cursor.getColumnIndexOrThrow(detailName));
+            }
+        } catch (Exception e) {
+            // Handle any exceptions
+            Log.e("DatabaseHelper", "Error while getting question details", e);
+        } finally {
+            if (cursor != null) {
+                cursor.close();
+            }
+            db.close();
+        }
+
+        return detailValue;
+    }
+
+    public String getQuestionIdByContent(String questionContent) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = null;
+        String questionId = null;
+
+        try {
+            cursor = db.query("questions", new String[]{"id"}, "content = ?", new String[]{questionContent}, null, null, null);
+
+            if (cursor != null && cursor.moveToFirst()) {
+                questionId = cursor.getString(cursor.getColumnIndexOrThrow("id"));
+            }
+        } catch (Exception e) {
+            // Handle any exceptions
+            Log.e("DatabaseHelper", "Error while getting question ID", e);
+        } finally {
+            if (cursor != null) {
+                cursor.close();
+            }
+            db.close();
+        }
+
+        return questionId;
+    }
 }

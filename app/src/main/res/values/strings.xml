@@ -18,4 +18,5 @@
     <string name="history_content">History Content</string>
     <string name="library_content">Library Content</string>
     <string name="account_content">Account Content</string>
+    <string name="questionPart_part">Part</string>
 </resources>
