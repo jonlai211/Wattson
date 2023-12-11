@@ -15,7 +15,10 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DB_NAME = "QuestionDatabase";
@@ -206,4 +209,27 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         return questionId;
     }
+
+    public HashMap<String, Set<String>> getUniqueTitlesByPart() {
+        HashMap<String, Set<String>> titlesByPart = new HashMap<>();
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.query("questions", new String[]{"part", "title"}, null, null, null, null, null);
+
+        if (cursor != null && cursor.moveToFirst()) {
+            do {
+                String part = cursor.getString(cursor.getColumnIndexOrThrow("part"));
+                String title = cursor.getString(cursor.getColumnIndexOrThrow("title"));
+
+                if (!titlesByPart.containsKey(part)) {
+                    titlesByPart.put(part, new HashSet<String>());
+                }
+                titlesByPart.get(part).add(title);
+            } while (cursor.moveToNext());
+            cursor.close();
+        }
+        db.close();
+        return titlesByPart;
+    }
+
+
 }

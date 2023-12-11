@@ -11,6 +11,7 @@ public class HistoryFragment extends Fragment {
 
     public HistoryFragment() {
         // Required empty public constructor
+        // ExpandableListView or RecyclerView + CardView
     }
 
     @Override
