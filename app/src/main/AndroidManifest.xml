@@ -29,9 +29,7 @@
         </activity>
 
         <activity android:name=".DetailActivity" />
-<!--        <activity android:name=".HistoryActivity"/>-->
-<!--        <activity android:name=".LibraryActivity"/>-->
-<!--        <activity android:name=".AccountActivity"/>-->
+        <activity android:name=".RecordingPlaybackActivity" />
 
     </application>
 </manifest>

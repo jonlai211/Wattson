@@ -1,7 +1,9 @@
 package com.example.wattson;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,7 +32,36 @@ public class HistoryFragment extends Fragment {
         adapter = new CustomExpandableListAdapter(getContext(), new ArrayList<>(recordingsByPart.keySet()), recordingsByPart);
         expandableListView.setAdapter(adapter);
 
+        expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+            @Override
+            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+                String selectedRecording = recordingsByPart.get(adapter.getGroup(groupPosition)).get(childPosition);
+                File directory = getContext().getExternalFilesDir(null);
+                if (directory != null) {
+                    String filePath = new File(directory, selectedRecording).getAbsolutePath();
+                    Log.d("HistoryFragment", "Recording file path: " + filePath);
+                    Intent intent = new Intent(getContext(), RecordingPlaybackActivity.class);
+                    intent.putExtra("RECORDING_FILE_NAME", filePath);
+                    startActivity(intent);
+                }
+                return true;
+
+            }
+        });
+
         return view;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        loadRecordings();
+    }
+
+    private void loadRecordings() {
+        recordingsByPart = getRecordingsGroupedByPart();
+        adapter = new CustomExpandableListAdapter(getContext(), new ArrayList<>(recordingsByPart.keySet()), recordingsByPart);
+        expandableListView.setAdapter(adapter);
     }
 
     public HashMap<String, List<String>> getRecordingsGroupedByPart() {

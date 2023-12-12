@@ -19,4 +19,5 @@
     <string name="library_content">Library Content</string>
     <string name="account_content">Account Content</string>
     <string name="questionPart_part">Part</string>
+    <string name="pause">pause</string>
 </resources>
