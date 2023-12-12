@@ -12,12 +12,14 @@ public class AudioRecording {
     private String filePath;
     private long duration;
     private boolean isRecording;
+    private String part;
 
-    public AudioRecording(String fileName, String filePath, long duration, boolean isRecording) {
+    public AudioRecording(String fileName, String filePath, long duration, boolean isRecording, String part) {
         this.fileName = fileName;
         this.filePath = filePath;
         this.duration = duration;
         this.isRecording = isRecording;
+        this.part = part;
     }
 
     public String getFileName() {
@@ -46,6 +48,14 @@ public class AudioRecording {
 
     public boolean isRecording() {
         return isRecording;
+    }
+
+    public String getPart() {
+        return part;
+    }
+
+    public void setPart(String part) {
+        this.part = part;
     }
 
     public void setRecording(boolean recordingStatus) {

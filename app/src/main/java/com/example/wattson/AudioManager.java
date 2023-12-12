@@ -28,7 +28,7 @@ public class AudioManager {
         this.context = context;
     }
 
-    public AudioRecording startRecording() {
+    public AudioRecording startRecording(String part, String title) {
         Log.d("AudioManager", "Begin recording");
         if (mediaRecorder != null) {
             mediaRecorder.stop();
@@ -43,7 +43,8 @@ public class AudioManager {
         }
 
         String directoryPath = directory.getAbsolutePath();
-        String fileName = "Recording_" + new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date()) + ".3gp";
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());
+        String fileName = part + "_" + title + "_" + timeStamp + ".3gp";
         currentRecordingPath = directoryPath + File.separator + fileName;
 
         mediaRecorder = new MediaRecorder();
@@ -62,7 +63,7 @@ public class AudioManager {
         recordingStartTime = System.currentTimeMillis();
         pausedDuration = 0;
 
-        return new AudioRecording(fileName, currentRecordingPath, 0, true);
+        return new AudioRecording(fileName, currentRecordingPath, 0, true, part);
     }
 
     public void stopRecording(AudioRecording recording) {
@@ -72,7 +73,7 @@ public class AudioManager {
         if (mediaRecorder != null && duration > 1000) {
             try {
                 mediaRecorder.stop();
-                Log.d("AudioManager", "Stop recording successfully");
+                Log.d("AudioManager", "Stop recording" + recording.getPart() + "successfully");
             } catch (IllegalStateException e) {
                 Log.e("AudioManager", "Stop recording failed", e);
             } finally {

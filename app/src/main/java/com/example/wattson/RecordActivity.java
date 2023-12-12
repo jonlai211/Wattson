@@ -52,24 +52,6 @@ public class RecordActivity extends AppCompatActivity {
     public void onRecordButtonClick(View view) {
         TextView recordStatusText = findViewById(R.id.record_status_text);
         TextView recordingTimeView = findViewById(R.id.recording_time_text);
-
-        if (!isRecordingStarted) {
-            currentRecording = audioManager.startRecording();
-            isRecordingStarted = true;
-            recordStatusText.setText(R.string.tap_to_pause);
-            recordingTimeView.setVisibility(View.VISIBLE);
-            handler.post(updateRecordingTimeRunnable);
-        } else if (currentRecording != null && currentRecording.isRecording()) {
-            audioManager.pauseRecording(currentRecording);
-            currentRecording.setRecording(false);
-            recordStatusText.setText(R.string.tap_to_resume_or_long_press_to_finish);
-            handler.removeCallbacks(updateRecordingTimeRunnable);
-        } else {
-            audioManager.resumeRecording(currentRecording);
-            currentRecording.setRecording(true);
-            recordStatusText.setText(R.string.tap_to_pause);
-            handler.post(updateRecordingTimeRunnable);
-        }
         // Update UI
     }
 

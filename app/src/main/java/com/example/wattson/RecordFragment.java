@@ -36,6 +36,8 @@ public class RecordFragment extends Fragment {
     private boolean isRecordingStarted = false;
     private boolean isPlaying = false;
     private final Handler handler = new Handler();
+    private String currentQuestionPart;
+    private String currentQuestionTitle;
 
     @Nullable
     @Override
@@ -174,7 +176,9 @@ public class RecordFragment extends Fragment {
         TextView recordingTimeView = view.findViewById(R.id.recording_time_text);
 
         if (!isRecordingStarted) {
-            currentRecording = audioManager.startRecording();
+            if (currentQuestionPart != null) {
+                currentRecording = audioManager.startRecording(currentQuestionPart, currentQuestionTitle);
+            }
             isRecordingStarted = true;
             recordStatusText.setText(R.string.tap_to_pause);
             recordingTimeView.setVisibility(View.VISIBLE);
@@ -436,6 +440,8 @@ public class RecordFragment extends Fragment {
             }
 
             String questionId = dbHelper.getQuestionIdByContent(question);
+            currentQuestionPart = dbHelper.getQuestionDetails(questionId, "part");
+            currentQuestionTitle = dbHelper.getQuestionDetails(questionId, "title");
 
             // Now get the 'part' detail for this question
             String part = dbHelper.getQuestionDetails(questionId, "part");
