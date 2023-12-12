@@ -28,6 +28,7 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".DetailActivity" />
 <!--        <activity android:name=".HistoryActivity"/>-->
 <!--        <activity android:name=".LibraryActivity"/>-->
 <!--        <activity android:name=".AccountActivity"/>-->

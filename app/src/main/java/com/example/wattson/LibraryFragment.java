@@ -1,5 +1,6 @@
 package com.example.wattson;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -42,6 +43,19 @@ public class LibraryFragment extends Fragment {
 
         CustomExpandableListAdapter expandableListAdapter = new CustomExpandableListAdapter(getContext(), listDataHeader, listDataChild);
         expandableListView.setAdapter(expandableListAdapter);
+
+        expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+            @Override
+            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+                String selectedTitle = (String) expandableListAdapter.getChild(groupPosition, childPosition);
+
+                Intent intent = new Intent(getContext(), DetailActivity.class);
+                intent.putExtra("SELECTED_TITLE", selectedTitle);
+                startActivity(intent);
+
+                return true;
+            }
+        });
 
         return view;
     }

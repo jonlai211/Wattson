@@ -231,5 +231,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return titlesByPart;
     }
 
+    public List<String> getContentsByTitle(String title) {
+        List<String> contents = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.query("questions", new String[]{"content"}, "title = ?", new String[]{title}, null, null, null);
+
+        if (cursor != null && cursor.moveToFirst()) {
+            do {
+                String content = cursor.getString(cursor.getColumnIndexOrThrow("content"));
+                contents.add(content);
+            } while (cursor.moveToNext());
+            cursor.close();
+        }
+        db.close();
+        return contents;
+    }
 
 }
