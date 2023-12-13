@@ -30,7 +30,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         super(context, DB_NAME, null, DB_VERSION);
         this.context = context;
         // TODO:Only use in development
-//        this.context.deleteDatabase(DB_NAME);
+        this.context.deleteDatabase(DB_NAME);
     }
 
     public static synchronized DatabaseHelper getInstance(Context context) {
