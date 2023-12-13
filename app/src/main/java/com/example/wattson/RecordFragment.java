@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.GridLayout;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
@@ -223,7 +224,7 @@ public class RecordFragment extends Fragment {
                 seekBarLayout.setVisibility(View.VISIBLE);
             }
 
-            LinearLayout controlPanel = getView().findViewById(R.id.control_panel);
+            GridLayout controlPanel = getView().findViewById(R.id.control_panel);
             if (controlPanel != null) {
                 controlPanel.setVisibility(View.VISIBLE);
             }

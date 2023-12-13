@@ -47,10 +47,10 @@
         android:clickable="true"
         android:focusable="true"
         android:visibility="visible"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/question_part"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/question_part"
         app:layout_constraintVertical_weight="2">
 
         <TextView
@@ -81,7 +81,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:visibility="gone"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/question_part">
 
@@ -106,70 +106,92 @@
     </LinearLayout>
 
     <!-- Control Part -->
-    <!--TODO: Redesign the ImageButton and layout better-->
-    <LinearLayout
+    <GridLayout
         android:id="@+id/control_panel"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:orientation="horizontal"
+        android:columnCount="3"
+        android:padding="16dp"
+        android:rowCount="2"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/question_part"
+        app:layout_constraintTop_toBottomOf="@id/seek_bar_layout"
         app:layout_constraintVertical_weight="2">
 
+        <!-- First Row -->
+        <!-- Play Button -->
         <ImageButton
             android:id="@+id/play_button"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/button_border"
+            android:layout_height="0dp"
+            android:layout_rowWeight="2"
+            android:layout_columnSpan="2"
+            android:layout_columnWeight="1"
+            android:background="?android:attr/selectableItemBackground"
             android:contentDescription="@string/play"
             android:onClick="onPlayButtonClick"
-            android:src="@drawable/baseline_play_arrow_24" />
+            android:scaleType="fitCenter"
+            android:src="@drawable/baseline_play_arrow_24"
+            app:tint="@color/unselected_nav_colors" />
 
-        <ImageButton
-            android:id="@+id/note_button"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/button_border"
-            android:contentDescription="@string/notes"
-            android:onClick="onNoteButtonClick"
-            android:src="@drawable/baseline_edit_note_24" />
-
-        <ImageButton
-            android:id="@+id/delete_button"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/button_border"
-            android:contentDescription="@string/delete"
-            android:onClick="onDeleteButtonClick"
-            android:src="@drawable/baseline_delete_24" />
-
-        <ImageButton
-            android:id="@+id/audio_to_text_button"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/button_border"
-            android:contentDescription="@string/audio_to_text"
-            android:onClick="onTranscribeButtonClick"
-            android:src="@drawable/baseline_text_format_24" />
-
+        <!-- Next Question Button -->
         <ImageButton
             android:id="@+id/next_question_button"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/button_border"
+            android:layout_height="0dp"
+            android:layout_rowWeight="2"
+            android:layout_columnWeight="1"
+            android:background="?android:attr/selectableItemBackground"
             android:contentDescription="@string/next"
             android:onClick="onNextButtonClick"
-            android:src="@drawable/baseline_navigate_next_24" />
-    </LinearLayout>
+            android:scaleType="fitCenter"
+            android:src="@drawable/baseline_navigate_next_24"
+            app:tint="@color/unselected_nav_colors" />
+
+        <!-- Second Row -->
+        <!-- Audio to Text Button -->
+        <ImageButton
+            android:id="@+id/audio_to_text_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="@string/audio_to_text"
+            android:onClick="onTranscribeButtonClick"
+            android:scaleType="fitCenter"
+            android:src="@drawable/baseline_text_format_24"
+            app:tint="@color/unselected_nav_colors" />
+
+        <!-- Delete Button -->
+        <ImageButton
+            android:id="@+id/delete_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="@string/delete"
+            android:onClick="onDeleteButtonClick"
+            android:scaleType="fitCenter"
+            android:src="@drawable/baseline_delete_24"
+            app:tint="@color/unselected_nav_colors" />
+
+        <!-- Note Button -->
+        <ImageButton
+            android:id="@+id/note_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="@string/notes"
+            android:onClick="onNoteButtonClick"
+            android:scaleType="fitCenter"
+            android:src="@drawable/baseline_edit_note_24"
+            app:tint="@color/unselected_nav_colors" />
+    </GridLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
