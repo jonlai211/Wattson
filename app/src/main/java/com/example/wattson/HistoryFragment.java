@@ -13,13 +13,18 @@ import androidx.fragment.app.Fragment;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.TreeMap;
 
 public class HistoryFragment extends Fragment {
     private ExpandableListView expandableListView;
     private CustomExpandableListAdapter adapter;
-    private HashMap<String, List<String>> recordingsByPart;
+    private LinkedHashMap<String, List<String>> recordingsByPart;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -60,15 +65,24 @@ public class HistoryFragment extends Fragment {
 
     private void loadRecordings() {
         recordingsByPart = getRecordingsGroupedByPart();
-        adapter = new CustomExpandableListAdapter(getContext(), new ArrayList<>(recordingsByPart.keySet()), recordingsByPart);
+        List<String> listDataHeader = new ArrayList<>(Arrays.asList("Part1", "Part2", "Part3")); // Static headers to ensure order
+        HashMap<String, List<String>> listDataChild = new LinkedHashMap<>(); // Use LinkedHashMap to preserve the order
+
+        for (String part : listDataHeader) {
+            if (recordingsByPart.containsKey(part)) {
+                listDataChild.put(part, recordingsByPart.get(part));
+            }
+        }
+
+        adapter = new CustomExpandableListAdapter(getContext(), listDataHeader, listDataChild);
         expandableListView.setAdapter(adapter);
     }
 
-    public HashMap<String, List<String>> getRecordingsGroupedByPart() {
-        HashMap<String, List<String>> recordingsByPart = new HashMap<>();
+    private LinkedHashMap<String, List<String>> getRecordingsGroupedByPart() {
         Context context = getContext();
         assert context != null;
         File directory = context.getExternalFilesDir(null);
+        LinkedHashMap<String, List<String>> recordingsByPart = new LinkedHashMap<>();
         if (directory != null && directory.listFiles() != null) {
             for (File file : directory.listFiles()) {
                 String fileName = file.getName();
@@ -86,6 +100,10 @@ public class HistoryFragment extends Fragment {
                 }
             }
         }
+        for (List<String> recordings : recordingsByPart.values()) {
+            recordings.sort(Collections.reverseOrder());
+        }
+
         return recordingsByPart;
     }
 
