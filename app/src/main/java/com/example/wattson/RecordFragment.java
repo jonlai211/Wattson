@@ -371,7 +371,7 @@ public class RecordFragment extends Fragment {
         recordPart.setVisibility(View.VISIBLE);
 
         // Hide control panel
-        LinearLayout controlPanel = getView().findViewById(R.id.control_panel);
+        GridLayout controlPanel = getView().findViewById(R.id.control_panel);
         controlPanel.setVisibility(View.GONE);
 
         // Clear recording time
