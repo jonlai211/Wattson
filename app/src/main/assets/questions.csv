@@ -2,15 +2,476 @@
 230912,Part1,Thing,Clothing,Do you prefer to wear comfortable and casual clothes or smart clothes?
 230912,Part1,Thing,Clothing,Do you like wearing T-shirts?
 230912,Part1,Thing,Clothing,Do you spend a lot of time choosing clothes?
+230912,Part1,Thing,Map,Do you often use a map on your phone? How often?
+230912,Part1,Thing,Map,Have you ever used a paper map?
+230912,Part1,Thing,Map,Would you ever put a map on the wall in your home when you were a child?
+230912,Part1,Thing,Map,Do you find it easy to read maps?
+230912,Part1,Thing,Musical instruments,Have you ever learned to play a musical instrument?
+230912,Part1,Thing,Musical instruments,What musical instruments do you enjoy listening to the most?
+230912,Part1,Thing,Musical instruments,Do you think children should learn to play an instrument at school?
+230912,Part1,Thing,Musical instruments,Do you think music education is important to children?
+230912,Part1,Thing,Noise,Do you like to stay in a place with a lot of noise?
+230912,Part1,Thing,Noise,What kinds of noises are there in the area where you live?
+230912,Part1,Thing,Noise,Do you want to move to a quieter place?
+230912,Part1,Thing,Noise,Do you think there is too much noise in today's world?
+230912,Part1,Thing,Noise,ls making noise one of people's rights?
+230912,Part1,Thing,Tea and coffee,Do people like tea and coffee nowadays?
+230912,Part1,Thing,Tea and coffee,Do you prefer to use tea or coffee to serve your guests?
+230912,Part1,Thing,Tea and coffee,When was the last time you had a cup of coffee or tea?
+230912,Part1,Thing,Tea and coffee,Do you usually buy your coffee in a coffee shop?
+230912,Part1,Thing,Films,What films do you like?
+230912,Part1,Thing,Films,Did you often watch films when you were a child?
+230912,Part1,Thing,Films,Did you ever go to the cinema alone as a child?
+230912,Part1,Thing,Films,Do you often go to the cinema with your friends?
+230912,Part1,Thing,Films,Do you think going to the cinema is a good way to spend time with friends?
+230912,Part1,Thing,Robots,Are robots important?
+230912,Part1,Thing,Robots,Would robots affect people's lives?
+230912,Part1,Thing,Robots,Have you ever watched a movie about robots?
+230912,Part1,Thing,Robots,Should we let a robot drive for us for long journeys?
+230912,Part1,Thing,Robots,What can robots do for you at home?
+230912,Part1,Thing,Gifts,Have you ever sent handmade gifts to others?
+230912,Part1,Thing,Gifts,Have you ever received a great gift?
+230912,Part1,Thing,Gifts,What do you consider when choosing a gift?
+230912,Part1,Thing,Gifts,Do you think you are good at choosing gifts?
+230912,Part1,Thing,Fishing,Is fishing popular in your country?
+230912,Part1,Thing,Fishing,Do you like eating fish?
+230912,Part1,Thing,Fishing,Have you ever been to a place where there are lots of fish around you?
+230912,Part1,Thing,Fishing,Have you seen any movies with lots of fish?
+230912,Part1,Thing,Geography,How do you like geography?
+230912,Part1,Thing,Geography,Do you think geography is useful?
+230912,Part1,Thing,Geography,Have you ever learned Geography?
+230912,Part1,Thing,Geography,Do you want to be a Geography teacher?
+230912,Part1,Thing,Bags,Do you usually carry a bag?
+230912,Part1,Thing,Bags,What kinds of bags do you like to carry?
+230912,Part1,Thing,Bags,Do you change your bags often?
+230912,Part1,Thing,Bags,"when you were young, did you have a school bag?"
+230912,Part1,Thing,Concentration,Did you stay focused in class when you were a child?
+230912,Part1,Thing,Concentration,Are you a focused people?
+230912,Part1,Thing,Concentration,How do you stay focused?
+230912,Part1,Thing,Concentration,Is it easy to stay focused in a noisy environment£¿
+230912,Part1,Thing,Day off,When was the last time you had a few days off?
+230912,Part1,Thing,Day off,What do you usually do when you have days off?
+230912,Part1,Thing,Day off,Do you usually spend your days off with your parents or with your friends?
+230912,Part1,Thing,Day off,What would you like to do if you had a day off tomorrow?
+230912,Part1,Thing,Dream,What was your childhood dream?
+230912,Part1,Thing,Dream,Are you the kind of person who sticks to dreams?
+230912,Part1,Thing,Dream,Are you an ambitious person?
+230912,Part1,Thing,Dream,What do you often dream of?
+230912,Part1,Thing,Favorite day,Which day is your favorite day?
+230912,Part1,Thing,Favorite day,Which day is your least favorite day?
+230912,Part1,Thing,Favorite day,What's your busiest day of the week?
+230912,Part1,Thing,Favorite day,How do you usually spend your time?
+230912,Part1,Thing,Fixing things,Can you fix things?
+230912,Part1,Thing,Fixing things,Did anybody teach you to fix things when you were a child?
+230912,Part1,Thing,Fixing things,Do you think it is necessary for people to learn to fix things?
+230912,Part1,Thing,Fixing things,What do you do when a thing is broken and cannot be fixed?
+230912,Part1,Thing,Health,How do you keep healthy?
+230912,Part1,Thing,Health,Do you often do exercises?
+230912,Part1,Thing,Health,What is your favorite sport?
+230912,Part1,Thing,Health,Are there health classes in your school?
+230912,Part1,Thing,Ice cream,Do you like ice cream?
+230912,Part1,Thing,Ice cream,Did you eat ice cream when you were a child?
+230912,Part1,Thing,Ice cream,Are there shops selling ice cream near the place where you live?
+230912,Part1,Thing,Ice cream,Can you make ice cream yourself?
+230912,Part1,Thing,Language,What languages can you speak?
+230912,Part1,Thing,Language,What languages would you like to learn in the future?
+230912,Part1,Thing,Language,When do you first learn English languages at school?
+230912,Part1,Thing,Language,Do you like to learn a second language?
+230912,Part1,Thing,Rain,Do you like rainy days?
+230912,Part1,Thing,Rain,Does it rain much in your city?
+230912,Part1,Thing,Rain,Would you like to live in a place that is dry or wet?
+230912,Part1,Thing,Rain,Do you enjoy going out in the rain?
+230912,Part1,Thing,Riding a bike,Did you have a bike when you were young?
+230912,Part1,Thing,Riding a bike,Did you ride a bike when you were little?
+230912,Part1,Thing,Riding a bike,Did you ride a bike to school?
+230912,Part1,Thing,Riding a bike,Do you ride a bike when you go out now?
+230912,Part1,Thing,Wild animals,Are there wild animals in your country?
+230912,Part1,Thing,Wild animals,Have you ever been to a zoo or a safari park?
+230912,Part1,Thing,Wild animals,What is the animal you would like to see in the wild?
+230912,Part1,Thing,Wild animals,Are there TV programs about wild animals in your country?
+230912,Part1,Thing,Work or studies,What subjects are you studying?
+230912,Part1,Thing,Work or studies,Is it very interesting?
+230912,Part1,Thing,Work or studies,Why did you choose to study that subject?
+230912,Part1,Thing,Work or studies,Do you prefer to study in the mornings or in the afternoons?
+230912,Part1,Thing,Work or studies,Are you looking forward to working?
+230912,Part1,Thing,Work or studies,Do you like your subject?
+230912,Part1,Thing,Work or studies,What work do you do?
+230912,Part1,Thing,Work or studies,Why did you choose to do that type of work?(or that job)
+230912,Part1,Thing,Work or studies,Do you miss being a student?
+230912,Part1,Thing,Work or studies,Do you like your job?
+230912,Part1,Thing,Work or studies,What technology do you use at work?
+230912,Part1,Thing,Work or studies,What technology do you use when you study?
+230912,Part1,Thing,Work or studies,Who helps you the most? And how?
+230912,Part1,Experience,Chatting,Do you like chatting with friends?
+230912,Part1,Experience,Chatting,What do you usually chat about with friends?
+230912,Part1,Experience,Chatting,Do you prefer to chat with a group of people or with only one friend?
+230912,Part1,Experience,Chatting,Do you prefer to communicate face-to-face or via social media?
+230912,Part1,Experience,Chatting,Do you argue with friends?
+230912,Part1,Experience,Running,Do you go running a lot?
+230912,Part1,Experience,Running,Where do you usually go running?
+230912,Part1,Experience,Running,When was the last time you went running?
+230912,Part1,Experience,Running,What do you think of running as a sport?
+230912,Part1,Experience,Helping others,Do you usually help people around you?
+230912,Part1,Experience,Helping others,"How do you help people around you, such as neighbours, family and friends?"
+230912,Part1,Experience,Helping others,Do your parents teach you how to help others?
+230912,Part1,Experience,Helping others,Did your parents help you a lot when you were young?
+230912,Part1,Experience,Helping others,What have you done to help the elderly?
+230912,Part1,Place,The city you live in,What city do you live in?
+230912,Part1,Place,The city you live in,Do you like this city? Why?
+230912,Part1,Place,The city you live in,How long have you lived in this city?
+230912,Part1,Place,The city you live in,Are there big changes in this city?
+230912,Part1,Place,The city you live in,ls this city your permanent residence?
+230912,Part1,Place,The city you live in,Are there people of different ages living in thiscity?
+230912,Part1,Place,Home/Accommodation,Can you describe the place where you live?
+230912,Part1,Place,Home/Accommodation,How long have you lived there?
+230912,Part1,Place,Home/Accommodation,Who do you live with?
+230912,Part1,Place,Home/Accommodation,Do you plan to live there for a long time?
+230912,Part1,Place,Home/Accommodation,What is the difference between where you are living now and where you have lived in the past?
+230912,Part1,Place,Home/Accommodation,Do you prefer living in a house or a flat?
+230912,Part1,Place,Home/Accommodation,What do you usually do in your flat?
+230912,Part1,Place,Home/Accommodation,What part of your home do you like the most?
+230912,Part1,Place,Home/Accommodation,Are there transport facilities to your home that are very good?
+230912,Part1,Place,Home/Accommodation,What kinds of accommodation do you live in?
+230912,Part1,Place,Home/Accommodation,Do you live in a house or a flat?
+230912,Part1,Place,Home/Accommodation,Please describe the room you live in?
+230912,Part1,Place,Home/Accommodation,What room does your family spend most of the time in?
+230912,Part1,Place,Home/Accommodation,What's your favorite room in your apartment/house?
+230912,Part1,Place,Home/Accommodation,What makes you feel pleasant in your home?
+230912,Part1,Place,Home/Accommodation,Do you think it is important to live in a comfortable environment?
+230912,Part1,Place,Home/Accommodation,What kind of house or flat do you want to live in the future?
+230912,Part1,Place,Hometown,What's (the name of) your hometown?
+230912,Part1,Place,Hometown,Is that a big city or a small place?
+230912,Part1,Place,Hometown,Please describe your hometown a little.
+230912,Part1,Place,Hometown,How long have you been living there?
+230912,Part1,Place,Hometown,Do you like your hometown?
+230912,Part1,Place,Hometown,Did you like living there?
+230912,Part1,Place,Hometown,What do you like most about your hometown?
+230912,Part1,Place,Hometown,Is there anything you disliked about it?
+230912,Part1,Place,Hometown,Do you think you'll continue living there for a long time?
+230912,Part1,Place,Hometown,Where is your hometown?
+230912,Part1,Place,Hometown,What's your hometown famous for?
+230912,Part1,Place,Hometown,Did you learn about the history of your hometown at school?
+230912,Part1,Place,The area you live in,Do you like the area that you live in?
+230912,Part1,Place,The area you live in,What are some changes in the area recently?
+230912,Part1,Place,The area you live in,Do you know any famous people in your area?
+230912,Part1,Place,The area you live in,Where do you like to go in your area?
+230912,Part1,Place,The area you live in,Do you know any of your neighbours?
+230912,Part1,Actor,Friends,How important are friends to you?
+230912,Part1,Actor,Friends,Do you often go out with your friends?
+230912,Part1,Actor,Friends,Where do you often meet each other?
+230912,Part1,Actor,Friends,What do you usually do with your friends?
+230912,Part1,Actor,Teachers,Do you want to be a teacher in the future?
+230912,Part1,Actor,Teachers,Do you remember one of your teachers?
+230912,Part1,Actor,Teachers,Do you have a favorite teacher?
+230912,Part1,Actor,Teachers,Do you think teachers are different now than the past?
 230912,Part2,Person,Successful Classmate,"Describe someone you studied with who is successful in his/her life
 You should say:
 Who this person is
 Where you studied together
 When you studied together
 And explain why you think this person is successful in his/her life."
-230912,Part2,Experience,Stimulating Activity,"Describe a time when you did an exciting activity with other people
+230912,Part2,Person,Interesting people,"Describe a person who always has interesting ideas or opinions
+You should say:
+Who this person is
+What this person does
+How you knew him/her
+And explain why you think his/her ideas or opinions are interesting"
+230912,Part2,Person,Successful businessman,"Describe a successful businessperson you know(e.g. running a family business)
+You should say:
+Who this person is
+How you knew him/her
+What business he/she does
+And explain why he/she is successful"
+230912,Part2,Person,Admired athlete,"Describe a sportsperson you admire
+You should say:
+Who he/she is
+What you know about him/her
+What he/she is like in real life
+What achievement he/she has made
+And explain why you admire him/her"
+230912,Part2,Person,Foreigners who are good at speaking Chinese,"Describe a foreigner who speaks Chinese very well
+You should say:
+Who this person is
+Where he/she is from
+How he/she learns Chinese
+And explain why he/she can speak Chinese well"
+230912,Part2,Person,Interesting people to meet,"Describe an interesting person who you have never met, but would like to know more about
+You should say:
+Who this person is
+How you heard about this person
+What interesting things he/she has done
+And explain why you'd like to know more about this person"
+230912,Part2,Person,People who like to cook,"Describe a person who enjoys cooking for others
+You should say:
+Who he/she is
+How you knew this person
+Who he/she usually cooks for
+And explain why you think he/she enjoys cooking for other people"
+230912,Part2,Person,Helpful people,"Describe someone who lives in your area and often helps other people
+You should say:
+Who this person is
+How this person helps others
+How important the help is
+And explain why you think this person often helps other people"
+230912,Part2,Person,Popular people,"Describe a popular person
+You should say:
+Who this person is
+What he or she is like
+Why you think this person is popular
+How this person influences the public"
+230912,Part2,Person,People who have recently moved,"Describe someone who has recently moved into his/her new home/accommodation
+You should say:
+Who this person is
+Why this person moved into his/her new home
+What kind of home/accommodation this person moved to
+And explain whether you think this move was a positive change for this person"
+230912,Part2,Place,Beautiful city,"Describe a beautiful city
+You should say:
+Where the city is
+How you knew about the city
+What buildings the city has
+What it is famous for
+And explain why you think this city is beautiful"
+230912,Part2,Place,City park,"Describe a park or a garden in your city
+You should say:
+How often you go there
+Where it is
+Who you often go there with
+What it is like
+And explain why you like to visit it"
+230912,Part2,Place,Interesting place,"Describe a place in your country that you think is interesting
+You should say:
+Where it is
+How you knew it
+What special features it has
+And explain why you think it is interesting"
+230912,Part2,Place,Place which have plenty of people,"Describe a time when you went to a place where there were a lot of people
+You should say:
+What was happening in this place
+Who you went to this place with
+Why there were so many people there
+And explain how you felt about being in a place with so many people"
+230912,Part2,Place,Distant places I want to go in the future,"Describe a place away from your home and you want to visit in the future
+You should say:
+Where you would like to go
+When you would like to go
+Who you want to go with
+And explain why you want to visit the place"
+230912,Part2,Experience,Exciting activity,"Describe a time when you did an exciting activity with other people
 You should say:
 What the activity was
 Where you did this activity
 Why you did this activity
 And explain how you felt about it."
+230912,Part2,Experience,Take pride in overcoming difficulties,"Describe a difficult task that you completed at work/study that you felt proud of
+You should say:
+What the task was
+How you completed it
+Why the task was difficult
+Why you were proud of the completion of the task"
+230912,Part2,Experience,Computer strike,"Describe a time when you had a problem with using the computer
+You should say:
+When it happened
+Where it happened
+What the problem was
+And explain how you solved the problem at last"
+230912,Part2,Experience,Bad service,"Describe a bad service you received in a restaurant/shop
+You should say
+When and where it happened
+What happened
+How it was solved
+And explain how you felt about the experience"
+230912,Part2,Experience,Waiting for good things,"Describe an occasion when you waited a long time for a nice thing
+You should say:
+When it happened
+What the nice thing was
+How long you waited
+Why you waited for a long time
+And explain how you felt about the experience"
+230912,Part2,Experience,Life-changing times,"Describe a time when something happened that changed your life in a good way
+You should say:
+When and where it happened
+What happened
+How you felt about it
+And explain how this changed your life in a good way"
+230912,Part2,Experience,Feel tired activities,"Describe an activity that made you feel tired
+You should say:
+When and where it took place
+Why you took part in it
+What the activity was
+And explain why it made you feel tired"
+230912,Part2,Experience,Party,"Describe a party that you enjoyed
+You should say:
+When and where the party was held
+Who attended the party
+What kind of party it was
+What you did in the party
+And explain why you enjoyed this party"
+230912,Part2,Experience,The moment you get the wrong message,"Describe an occasion when you got incorrect information
+You should say:
+When you got it
+How you got it
+How you found it was incorrect
+And how you felt about it"
+230912,Part2,Experience,Spend time with your kids,"Describe an occasion when you spent time with a young child
+You should say:
+Who this child was
+When you spent time with this child
+What you did together
+And how you felt about it"
+230912,Part2,Experience,Get lost,"Describe a time when you lost your way
+You should say:
+When it was
+Where you went
+How you got lost
+And explain what happened after you lost your way"
+230912,Part2,Experience,Childhood fun,"Describe an enjoyable experience in your childhood
+You should say:
+When and where you had this experience
+Who you were with
+What you did
+How you felt about it"
+230912,Part2,Experience,Want to try the adventure,"Describe an adventure you would like to take in the future
+You should say:
+What the adventure is
+Where you would go
+Who you would be with
+And explain why you would like to take the adventure"
+230912,Part2,Experience,Speaking experience,"Describe a speech experience that you had
+You should say:
+Who you gave the speech to
+What the speech was about
+Why you gave the speech
+And explain how you felt about the speech"
+230912,Part2,Experience,Impressive car trip,"Describe a car journey you made that you remember well
+You should say
+When it was
+Who was with you
+How long the journey took
+And explain why you remember this car journey so well"
+230912,Part2,Thing,Historical period of interest,"Describe a period in history which you are interested in
+You should say:
+When it was
+What happened
+How you first heard about it
+And explain why you are interested in this period of history."
+230912,Part2,Thing,Good advice,"Describe a piece of good advice that you gave to someone
+You should say:
+Who you gave the advice to
+What the advice was
+Why you gave the advice
+And explain how he/she followed your advice"
+230912,Part2,Thing,Useful advertising,"Describe a good advertisement that you think is useful
+You should say:
+Where you can see it
+What it shows
+Why you think it is useful
+And explain how you feel about it"
+230912,Part2,Thing,Areas of scientific interest,"Describe an area of science (Biology, Robotics, etc.)that you are interested in and would like to learn more about
+You should say:
+Which area it is
+When and where you came to know this area
+How you got information about this area
+And explain why you are interested in this area"
+230912,Part2,Thing,Important rules at school/work,"Describe a rule that is important in your school or at work
+You should say:
+What the rule is about
+What happens when people break the rule
+Why you think it is an important rule
+And explain how you feel about the rule"
+230912,Part2,Thing,A picture,"Describe a drawing/painting that you like
+You should say:
+When you first saw this painting
+What the painting is about
+Who drew/painted it
+And explain why you like this drawing/painting"
+230912,Part2,Thing,Pictures that make you happy,"Describe a photo that makes you feel happy
+You should say:
+When and where you took the photo
+What the photo is like
+How often you look at the photo
+And explain why it makes you feel happy"
+230912,Part2,Thing,Love to watch sports,"Describe a sports program you like to watch
+You should say:
+What it is
+When you first watch it
+Who you like to watch this program with
+And explain why you like to watch this program"
+230912,Part2,Thing,Traditional festival,"Describe a traditional celebration you enjoy in your country
+You should say:
+What it is
+Who you celebrate with
+What you do in this celebration
+And explain why you enjoy this traditional celebration"
+230912,Part2,Thing,Save up for expensive gifts,"Describe an expensive gift that you would like to give someone
+You should say:
+What gift you would like to buy
+Who you would like to give it to
+How long it would take to save the money
+And explain why you would like to give this expensive gift to this person."
+230912,Part2,Thing,A book that you read many times,"Describe a book you have read more than once.
+You should say:
+Why you read this book
+What this book was about
+Whether you learnt anything from it
+And explain why you have read this book more than once."
+230912,Part2,Thing,Ideal house/apartment,"Describe your idea of a perfect house
+You should say:
+Where it would be
+What it would be like
+How special it would be
+And explain why it would be perfect for you"
+230912,Part2,Thing,Movies that let you down,"Describe a movie you watched recently that you felt disappointed about
+You should say:
+When it was
+What it was about
+Why you decided to watch it
+And explain why you felt disappointed about it"
+230912,Part2,Thing,Childhood game,"Describe a game that you played in your childhood
+You should say:
+What the game was
+When you played it
+Who you played it with
+And explain how you felt about the game"
+230912,Part2,Thing,Clothes you like to wear,"Describe a piece of clothing you wear most often
+You should say:
+What it is
+How often you wear it
+What it is like
+And explain why you enjoy wearing it"
+230912,Part2,Thing,Want to try the adventure,"Describe an adventure you would like to take in the future
+You should say:
+What the adventure is
+Where you would go
+Who you would be with
+And explain why you would like to take the adventure"
+230912,Part2,Thing,Want to try water sports,"Describe a water sport you would like to try
+You should say:
+What the water sport is
+Where you would try it
+Whether it would be easy or difficult to do
+And explain why you would like to try this water sport."
+230912,Part2,Thing,A new store,"Describe a new shop that recently opened in your city/town
+You should say:
+Where the shop is
+What it sells
+What kinds of people usually go to this shop
+And explain how successful you think it will be in the future"
+230912,Part2,Thing,Fun job,"Describe a job that you think is interesting
+You should say:
+What it is
+How you knew it
+What skills it requires
+And explain why you think it is interesting"
+230912,Part2,Thing,Useful invention,"Describe an invention which is very useful in your daily life.
+You should say:
+What it is
+What you use it for
+Is it easy to use
+And explain why it is very useful in your daily life."
+230912,Part2,Thing,Important decision,"Describe a time when you had to make an important decision
+You should say:
+What decision you had to make
+How you made the decision
+Why this decision was important
+And explain whether you think it was a right decision"
