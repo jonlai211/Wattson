@@ -1,6 +1,7 @@
 package com.example.wattson;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -60,24 +61,29 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
 
     @Override
     public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
+        String listTitle = (String) getGroup(groupPosition);
+
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.list_group, parent, false);
         }
+
         TextView listTitleTextView = convertView.findViewById(R.id.listTitle);
-        String listTitle = (String) getGroup(groupPosition);
+        listTitleTextView.setTypeface(null, Typeface.BOLD);
         listTitleTextView.setText(listTitle);
         return convertView;
     }
 
     @Override
     public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
+        String expandedListText = (String) getChild(groupPosition, childPosition);
+
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.list_item, parent, false);
         }
         TextView expandedListTextView = convertView.findViewById(R.id.expandedListItem);
-        String expandedListText = (String) getChild(groupPosition, childPosition);
+
         expandedListTextView.setText(expandedListText);
         return convertView;
     }

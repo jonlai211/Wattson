@@ -1,11 +1,16 @@
 <!-- fragment_history.xml -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <ExpandableListView
         android:id="@+id/history_expandable_list_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
+        android:layout_height="wrap_content"
+        android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="0.5dp">
+        <!-- ExpandableListView will handle displaying the data -->
+    </ExpandableListView>
 </RelativeLayout>
