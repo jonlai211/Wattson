@@ -39,12 +39,12 @@ public class RecordingPlaybackActivity extends AppCompatActivity {
             if (!isPlaying) {
                 audioManager.playRecording(recordingFileName);
                 isPlaying = true;
-                playButton.setImageResource(R.drawable.baseline_pause_24);
+                playButton.setImageResource(R.drawable.baseline_pause_48);
                 updateSeekBar();
             } else {
                 audioManager.pausePlayback();
                 isPlaying = false;
-                playButton.setImageResource(R.drawable.baseline_play_arrow_24);
+                playButton.setImageResource(R.drawable.baseline_play_arrow_48);
             }
         });
 
