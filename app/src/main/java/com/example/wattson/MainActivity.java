@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
                         selectedFragment = new HistoryFragment();
                     } else if (item.getItemId() == R.id.navigation_library) {
                         selectedFragment = new LibraryFragment();
-                    } else if (item.getItemId() == R.id.navigation_account) {
-                        selectedFragment = new AccountFragment();
+//                    } else if (item.getItemId() == R.id.navigation_account) {
+//                        selectedFragment = new AccountFragment();
                     }
 
                     // Switch to selected fragment

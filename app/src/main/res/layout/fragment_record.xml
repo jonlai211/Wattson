@@ -10,31 +10,39 @@
     <TextView
         android:id="@+id/questionPart_part"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:gravity="center"
         android:text="@string/questionPart_part"
+        android:textSize="18sp"
+        android:textColor="@color/yellow_1"
+        android:textStyle="bold"
+        android:background="@color/yellow_2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Divider -->
     <TextView
         android:id="@+id/question_part"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="500dp"
+        android:background="@color/yellow_1"
         android:gravity="center"
         android:text="@string/question_part"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/black"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@id/record_part"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionPart_part"
         app:layout_constraintVertical_weight="1" />
 
-    <!-- Divider -->
     <View
         android:id="@+id/divider"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/divider_color"
+        android:layout_height="2dp"
+        android:background="@color/yellow_2"
         app:layout_constraintTop_toBottomOf="@id/question_part"
         app:layout_constraintBottom_toTopOf="@id/record_part" />
 
@@ -43,7 +51,7 @@
         android:id="@+id/record_part"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="?android:attr/selectableItemBackground"
+        android:background="@color/yellow_1"
         android:clickable="true"
         android:focusable="true"
         android:visibility="visible"
@@ -60,6 +68,7 @@
             android:layout_gravity="center"
             android:gravity="center_horizontal"
             android:text="@string/tap_to_record"
+            android:textSize="22sp"
             android:textAlignment="center" />
 
         <!-- TextView for Displaying Recording Time -->
@@ -70,7 +79,7 @@
             android:layout_gravity="center_horizontal|top"
             android:layout_marginTop="20dp"
             android:text="@string/_00_00"
-            android:textColor="#6200EE"
+            android:textColor="@color/yellow_2"
             android:textSize="18sp"
             android:visibility="invisible" />
     </FrameLayout>
@@ -82,6 +91,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:visibility="invisible"
+        android:background="@color/yellow_1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/question_part">
 
@@ -92,7 +102,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="@string/_00_00"
-            android:textColor="#6200EE"
+            android:textColor="@color/yellow_2"
             android:textSize="18sp" />
 
         <!-- Seek Bar -->
@@ -102,7 +112,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="50dp" />
+            android:layout_marginEnd="50dp"
+            android:thumbTint="@color/yellow_2"
+            android:progressTint="@color/yellow_2"/>
     </LinearLayout>
 
     <!-- Control Part -->
@@ -110,7 +122,8 @@
         android:id="@+id/control_panel"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:columnCount="2"
+        android:background="@color/yellow_1"
+        android:columnCount="3"
         android:padding="16dp"
         android:rowCount="1"
         android:visibility="gone"
@@ -127,14 +140,15 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="2"
-            android:layout_columnSpan="2"
+            android:layout_columnSpan="1"
             android:layout_columnWeight="1  "
+            android:alpha="0.75"
             android:background="?android:attr/selectableItemBackground"
             android:contentDescription="@string/play"
             android:onClick="onPlayButtonClick"
             android:scaleType="fitCenter"
             android:src="@drawable/baseline_play_arrow_24"
-            app:tint="@color/unselected_nav_colors" />
+            app:tint="@color/yellow_2" />
 
         <!-- Next Question Button -->
         <ImageButton
@@ -143,27 +157,28 @@
             android:layout_height="0dp"
             android:layout_rowWeight="2"
             android:layout_columnWeight="1"
+            android:alpha="0.75"
             android:background="?android:attr/selectableItemBackground"
             android:contentDescription="@string/next"
             android:onClick="onNextButtonClick"
             android:scaleType="fitCenter"
             android:src="@drawable/baseline_navigate_next_24"
-            app:tint="@color/unselected_nav_colors" />
+            app:tint="@color/yellow_2" />
 
         <!-- Second Row -->
         <!-- Audio to Text Button -->
-        <ImageButton
-            android:id="@+id/audio_to_text_button"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:background="?android:attr/selectableItemBackground"
-            android:contentDescription="@string/audio_to_text"
-            android:onClick="onTranscribeButtonClick"
-            android:scaleType="fitCenter"
-            android:src="@drawable/baseline_text_format_24"
-            app:tint="@color/unselected_nav_colors" />
+        <!--        <ImageButton-->
+        <!--            android:id="@+id/audio_to_text_button"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="0dp"-->
+        <!--            android:layout_rowWeight="1"-->
+        <!--            android:layout_columnWeight="1"-->
+        <!--            android:background="?android:attr/selectableItemBackground"-->
+        <!--            android:contentDescription="@string/audio_to_text"-->
+        <!--            android:onClick="onTranscribeButtonClick"-->
+        <!--            android:scaleType="fitCenter"-->
+        <!--            android:src="@drawable/baseline_text_format_24"-->
+        <!--            app:tint="@color/unselected_nav_colors" />-->
 
         <!-- Delete Button -->
         <ImageButton
@@ -172,26 +187,27 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
+            android:alpha="0.75"
             android:background="?android:attr/selectableItemBackground"
             android:contentDescription="@string/delete"
             android:onClick="onDeleteButtonClick"
             android:scaleType="fitCenter"
             android:src="@drawable/baseline_delete_24"
-            app:tint="@color/unselected_nav_colors" />
+            app:tint="@color/yellow_2" />
 
         <!-- Note Button -->
-        <ImageButton
-            android:id="@+id/note_button"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:background="?android:attr/selectableItemBackground"
-            android:contentDescription="@string/notes"
-            android:onClick="onNoteButtonClick"
-            android:scaleType="fitCenter"
-            android:src="@drawable/baseline_edit_note_24"
-            app:tint="@color/unselected_nav_colors" />
+        <!--        <ImageButton-->
+        <!--            android:id="@+id/note_button"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="0dp"-->
+        <!--            android:layout_rowWeight="1"-->
+        <!--            android:layout_columnWeight="1"-->
+        <!--            android:background="?android:attr/selectableItemBackground"-->
+        <!--            android:contentDescription="@string/notes"-->
+        <!--            android:onClick="onNoteButtonClick"-->
+        <!--            android:scaleType="fitCenter"-->
+        <!--            android:src="@drawable/baseline_edit_note_24"-->
+        <!--            app:tint="@color/unselected_nav_colors" />-->
     </GridLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -72,11 +72,11 @@ public class RecordFragment extends Fragment {
         ImageButton playButton = view.findViewById(R.id.play_button);
         playButton.setOnClickListener(this::onPlayButtonClick);
 
-        ImageButton noteButton = view.findViewById(R.id.note_button);
-        noteButton.setOnClickListener(this::onNoteButtonClick);
+//        ImageButton noteButton = view.findViewById(R.id.note_button);
+//        noteButton.setOnClickListener(this::onNoteButtonClick);
 
-        ImageButton transcribeButton = view.findViewById(R.id.audio_to_text_button);
-        transcribeButton.setOnClickListener(this::onTranscribeButtonClick);
+//        ImageButton transcribeButton = view.findViewById(R.id.audio_to_text_button);
+//        transcribeButton.setOnClickListener(this::onTranscribeButtonClick);
 
         ImageButton deleteButton = view.findViewById(R.id.delete_button);
         deleteButton.setOnClickListener(this::onDeleteButtonClick);

@@ -2,14 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/navigation_record"
-        android:title="@string/record" />
+        android:title="@string/record"
+        android:icon="@drawable/baseline_emergency_recording_24"/>
     <item
         android:id="@+id/navigation_history"
-        android:title="@string/history" />
+        android:title="@string/history"
+        android:icon="@drawable/baseline_browse_gallery_24"/>
     <item
         android:id="@+id/navigation_library"
-        android:title="@string/library" />
-    <item
-        android:id="@+id/navigation_account"
-        android:title="@string/account" />
+        android:title="@string/library"
+        android:icon="@drawable/baseline_library_books_24"/>
+<!--    <item-->
+<!--        android:id="@+id/navigation_account"-->
+<!--        android:title="@string/account" />-->
 </menu>

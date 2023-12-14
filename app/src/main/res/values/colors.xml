@@ -10,4 +10,17 @@
     <color name="selected_nav_colors">#FF6200EE</color>
     <color name="unselected_nav_colors">#FFBABCBE</color>
     <color name="divider_color">#ddd</color>
+
+    <color name="shine_purple">#7B66FF</color>
+    <color name="light_blue">#5FBDFF</color>
+    <color name="dark_green">#265073</color>
+    <color name="lake_green">#2D9596</color>
+    <color name="water_blue">#4CB8D8</color>
+    <color name="forest_green">#9AD0C2</color>
+    <color name="yellow_green">#ECF4D6</color>
+    <color name="yellow_1">#FFF0DA</color>
+    <color name="yellow_2">#D9723E</color>
+    <color name="yellow_3">#FFF5D6</color>
+    <color name="blue_1">#C5FFF8</color>
+    <color name="blue_2">#4BACCB</color>
 </resources>
