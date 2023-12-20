@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.Wattson" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/light_blue</item>
+        <item name="colorPrimary">@color/yellow_2</item>
         <item name="colorPrimaryVariant">@color/black</item>
         <item name="colorOnPrimary">@color/yellow_green</item>
         <!-- Secondary brand color. -->

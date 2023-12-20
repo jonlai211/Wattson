@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/CVE-2023-32700 patched) (preloaded format=pdflatex 2023.10.17)  20 DEC 2023 17:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/CVE-2023-32700 patched) (preloaded format=pdflatex 2023.10.17)  20 DEC 2023 22:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -417,82 +417,101 @@ ings
 \@dblbotnum=\count293
 \c@dblbotnumber=\count294
 )
-(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
-Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
-
+(/usr/share/texlive/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box55
+\UL@hyphenbox=\box56
+\UL@skip=\skip65
+\UL@hook=\toks23
+\UL@height=\dimen179
+\UL@pe=\count295
+\UL@pixel=\dimen180
+\ULC@box=\box57
+Package: ulem 2019/11/18
+\ULdepth=\dimen181
+)
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
-\col@sep=\dimen179
-\ar@mcellbox=\box55
-\extrarowheight=\dimen180
-\NC@list=\toks23
-\extratabsurround=\skip65
-\backup@length=\skip66
-\ar@cellbox=\box56
+\col@sep=\dimen182
+\ar@mcellbox=\box58
+\extrarowheight=\dimen183
+\NC@list=\toks24
+\extratabsurround=\skip66
+\backup@length=\skip67
+\ar@cellbox=\box59
 )
-\TX@col@width=\dimen181
-\TX@old@table=\dimen182
-\TX@old@col=\dimen183
-\TX@target=\dimen184
-\TX@delta=\dimen185
-\TX@cols=\count295
-\TX@ftn=\toks24
+(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+\TX@col@width=\dimen184
+\TX@old@table=\dimen185
+\TX@old@col=\dimen186
+\TX@target=\dimen187
+\TX@delta=\dimen188
+\TX@cols=\count296
+\TX@ftn=\toks25
 )
-(/usr/share/texlive/texmf-dist/tex/generic/ulem/ulem.sty
-\UL@box=\box57
-\UL@hyphenbox=\box58
-\UL@skip=\skip67
-\UL@hook=\toks25
-\UL@height=\dimen186
-\UL@pe=\count296
-\UL@pixel=\dimen187
-\ULC@box=\box59
-Package: ulem 2019/11/18
-\ULdepth=\dimen188
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen189
+\lightrulewidth=\dimen190
+\cmidrulewidth=\dimen191
+\belowrulesep=\dimen192
+\belowbottomsep=\dimen193
+\aboverulesep=\dimen194
+\abovetopsep=\dimen195
+\cmidrulesep=\dimen196
+\cmidrulekern=\dimen197
+\defaultaddspace=\dimen198
+\@cmidla=\count297
+\@cmidlb=\count298
+\@aboverulesep=\dimen199
+\@belowrulesep=\dimen256
+\@thisruleclass=\count299
+\@lastruleclass=\count300
+\@thisrulewidth=\dimen257
 )
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty
 Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
 )
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-10-26 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count297
+\l__color_backend_stack_int=\count301
 \l__pdf_internal_box=\box60
 )
 (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
 
 -- Lines per column: 56 (exact).
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count298
-\scratchdimen=\dimen189
+\scratchcounter=\count302
+\scratchdimen=\dimen258
 \scratchbox=\box61
-\nofMPsegments=\count299
-\nofMParguments=\count300
+\nofMPsegments=\count303
+\nofMParguments=\count304
 \everyMPshowfont=\toks26
-\MPscratchCnt=\count301
-\MPscratchDim=\dimen190
-\MPnumerator=\count302
-\makeMPintoPDFobject=\count303
+\MPscratchCnt=\count305
+\MPscratchDim=\dimen259
+\MPnumerator=\count306
+\makeMPintoPDFobject=\count307
 \everyMPtoPDFconversion=\toks27
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -503,163 +522,363 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 27.
+Package hyperref Info: Link coloring OFF on input line 31.
 
 (./report.out) (./report.out)
 \@outlinefile=\write3
 \openout3 = `report.out'.
 
-<src/all-classes.pdf, id=67, 619.35388pt x 320.1561pt>
+
+Overfull \hbox (26.89536pt too wide) in paragraph at lines 66--66
+ [] 
+ []
+
+
+Overfull \hbox (26.89536pt too wide) in paragraph at lines 66--66
+ [] 
+ []
+
+
+Overfull \hbox (26.89536pt too wide) in paragraph at lines 66--66
+ [] 
+ []
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
+Underfull \hbox (badness 10000) in paragraph at lines 100--100
+[]|\OT1/ptm/b/n/8 Pronunciation
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--100
+[]|\OT1/ptm/b/n/8 Random
+ []
+
+<src/all-classes.pdf, id=95, 619.35388pt x 320.1561pt>
 File: src/all-classes.pdf Graphic file (type pdf)
 <use src/all-classes.pdf>
-Package pdftex.def Info: src/all-classes.pdf  used on input line 52.
+Package pdftex.def Info: src/all-classes.pdf  used on input line 117.
 (pdftex.def)             Requested size: 448.07378pt x 231.62114pt.
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
- <./src/all-classes.pdf>]
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 7
-8.
+]
+<src/record layout remove.png, id=107, 1263.72125pt x 1162.3425pt>
+File: src/record layout remove.png Graphic file (type png)
+<use src/record layout remove.png>
+Package pdftex.def Info: src/record layout remove.png  used on input line 143.
+(pdftex.def)             Requested size: 252.0pt x 231.77267pt.
+<src/flowchart.pdf, id=109, 311.24278pt x 431.69278pt>
+File: src/flowchart.pdf Graphic file (type pdf)
+<use src/flowchart.pdf>
+Package pdftex.def Info: src/flowchart.pdf  used on input line 149.
+(pdftex.def)             Requested size: 224.03743pt x 310.74611pt.
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 1
+56.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-<src/record layout remove.png, id=257, 1263.72125pt x 1162.3425pt>
-File: src/record layout remove.png Graphic file (type png)
-<use src/record layout remove.png>
-Package pdftex.def Info: src/record layout remove.png  used on input line 80.
-(pdftex.def)             Requested size: 252.0pt x 231.77267pt.
-
-Underfull \hbox (badness 1394) in paragraph at lines 77--84
+Underfull \hbox (badness 2326) in paragraph at lines 155--157
 []\OT1/ptm/b/n/10 User In-ter-face (UI)\OT1/ptm/m/n/10 : The pri-mary com-po-ne
 nts of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--84
+Underfull \hbox (badness 10000) in paragraph at lines 155--157
 \OT1/pcr/m/n/10 res/layout/fragment_record.xml\OT1/ptm/m/n/10 . The
  []
 
 
-Underfull \hbox (badness 3792) in paragraph at lines 77--84
+Underfull \hbox (badness 6032) in paragraph at lines 155--157
 \OT1/ptm/m/n/10 cor-re-spond-ing class di-a-gram il-lus-trates the ob-ject
  []
 
 
-Underfull \hbox (badness 2547) in paragraph at lines 77--84
-\OT1/ptm/m/n/10 struc-ture in Fig-ure []4[]. Ini-tially, the UI lay-out is
+Underfull \hbox (badness 3579) in paragraph at lines 155--157
+\OT1/ptm/m/n/10 struc-ture in Fig-ure []5[]. Ini-tially, the UI lay-out is
  []
 
 
-Underfull \hbox (badness 2837) in paragraph at lines 77--84
+Underfull \hbox (badness 4120) in paragraph at lines 155--157
 \OT1/ptm/m/n/10 as shown in the schematic Fig-ure []2[]. In-ter-ac-tion
  []
 
 
-Underfull \hbox (badness 3826) in paragraph at lines 77--84
+Underfull \hbox (badness 5374) in paragraph at lines 155--157
 \OT1/ptm/m/n/10 and vis-i-bil-ity of dif-fer-ent UI el-e-ments, such as
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--84
+Underfull \hbox (badness 10000) in paragraph at lines 155--157
 \OT1/ptm/m/n/10 but-tons, are con-trolled in \OT1/pcr/m/n/10 RecordFragment
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--84
+Underfull \hbox (badness 10000) in paragraph at lines 155--157
 \OT1/ptm/m/n/10 by mod-i-fy-ing their vis-i-bil-ity at-tributes (vis-i-ble,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--84
+Underfull \hbox (badness 10000) in paragraph at lines 155--157
 \OT1/ptm/m/n/10 while the View-Group in-cludes \OT1/pcr/m/n/10 FrameLayout\OT1/
 ptm/m/n/10 ,
  []
 
-<src/flowchart.pdf, id=261, 311.24278pt x 431.69278pt>
-File: src/flowchart.pdf Graphic file (type pdf)
-<use src/flowchart.pdf>
-Package pdftex.def Info: src/flowchart.pdf  used on input line 88.
-(pdftex.def)             Requested size: 224.03743pt x 310.74611pt.
-<src/record part.pdf, id=262, 619.35388pt x 410.49359pt>
-File: src/record part.pdf Graphic file (type pdf)
-<use src/record part.pdf>
-Package pdftex.def Info: src/record part.pdf  used on input line 95.
-(pdftex.def)             Requested size: 448.07378pt x 296.97699pt.
-<src/datahelper.pdf, id=264, 281.13028pt x 206.6922pt>
-File: src/datahelper.pdf Graphic file (type pdf)
-<use src/datahelper.pdf>
-Package pdftex.def Info: src/datahelper.pdf  used on input line 103.
-(pdftex.def)             Requested size: 216.81pt x 159.40262pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 100--107
-[]\OT1/ptm/b/n/10 Permissions and Data Man-age-ment\OT1/ptm/m/n/10 :
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 100--107
-\OT1/ptm/m/n/10 The \OT1/pcr/m/n/10 RecordFragment \OT1/ptm/m/n/10 class man-ag
-es
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 100--107
-\OT1/ptm/m/n/10 per-mis-sions and data in-tri-cately. It checks
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 100--107
-\OT1/ptm/m/n/10 for au-dio record-ing per-mis-sions us-ing the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 100--107
-\OT1/pcr/m/n/10 ContextCompat.checkSelfPermission
- []
-
-
-Underfull \hbox (badness 4168) in paragraph at lines 100--107
-\OT1/ptm/m/n/10 norms. Ad-di-tion-ally, the class in-ter-acts with the
- []
-
-
-Underfull \hbox (badness 1648) in paragraph at lines 100--107
-\OT1/ptm/m/n/10 fetch-ing ran-dom ques-tions and their cor-re-spond-ing
- []
-
-
-Underfull \hbox (badness 2538) in paragraph at lines 100--107
-\OT1/ptm/m/n/10 through the \OT1/pcr/m/n/10 AudioManager \OT1/ptm/m/n/10 class,
- show-cas-ing a
- []
-
-[2 <./src/record layout remove.png> <./src/flowchart.pdf>]
-<src/record-sequence.pdf, id=281, 408.56638pt x 688.49219pt>
+[2 <./src/all-classes.pdf>]
+<src/record-sequence.pdf, id=298, 408.56638pt x 688.49219pt>
 File: src/record-sequence.pdf Graphic file (type pdf)
 <use src/record-sequence.pdf>
-Package pdftex.def Info: src/record-sequence.pdf  used on input line 115.
+Package pdftex.def Info: src/record-sequence.pdf  used on input line 159.
 (pdftex.def)             Requested size: 252.0pt x 424.65459pt.
+ [3 <./src/record layout remove.png> <./src/flowchart.pdf> <./src/record-sequen
+ce.pdf
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlptm.fd)
+pdfTeX warning: /usr/bin/pdflatex (file ./src/record-sequence.pdf): PDF inclusi
+on: multiple pdfs with page group included in a single page
+>]
+<src/record part.pdf, id=310, 619.35388pt x 410.49359pt>
+File: src/record part.pdf Graphic file (type pdf)
+<use src/record part.pdf>
+Package pdftex.def Info: src/record part.pdf  used on input line 169.
+(pdftex.def)             Requested size: 448.07378pt x 296.97699pt.
+
+
+LaTeX Warning: Reference `fig:datahelper' on page 4 undefined on input line 175
+.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [3 <./src/record part.pdf> <./src/datahelper.pdf
+ [4 <./src/record part.pdf>] (/usr/share/texlive/texmf-dist/tex/latex/psnfss/om
+lptm.fd)
+Underfull \hbox (badness 1888) in paragraph at lines 212--214
+\OT1/ptm/m/n/10 the His-tory and Li-brary parts is pri-mar-ily de-fined
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--214
+\OT1/ptm/m/n/10 in \OT1/pcr/m/n/10 res/layout/fragment_history.xml
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--214
+\OT1/ptm/m/n/10 and \OT1/pcr/m/n/10 res/layout/fragment_library.xml\OT1/ptm/m/n
+/10 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--214
+\OT1/ptm/m/n/10 re-spec-tively. These frag-ments uti-lize an
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--214
+\OT1/pcr/m/n/10 ExpandableListView \OT1/ptm/m/n/10 to dis-play the data
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--214
+\OT1/ptm/m/n/10 in a hi-er-ar-chi-cal man-ner. The cus-tom adapter
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--214
+\OT1/pcr/m/n/10 CustomExpandableListAdapter \OT1/ptm/m/n/10 is em-ployed
+ []
+
+<src/history layout remove.png, id=387, 1325.95375pt x 1178.4025pt>
+File: src/history layout remove.png Graphic file (type png)
+<use src/history layout remove.png>
+Package pdftex.def Info: src/history layout remove.png  used on input line 220.
+
+(pdftex.def)             Requested size: 289.07999pt x 256.91182pt.
+<src/history library part.pdf, id=388, 513.83968pt x 568.04218pt>
+File: src/history library part.pdf Graphic file (type pdf)
+<use src/history library part.pdf>
+Package pdftex.def Info: src/history library part.pdf  used on input line 227.
+(pdftex.def)             Requested size: 448.07378pt x 495.36284pt.
+[5 <./src/history layout remove.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6 <./src/history library part.pdf>]
+Underfull \hbox (badness 7433) in paragraph at lines 247--248
+[]\OT1/pcr/m/n/10 getRecordingsGroupedByPart \OT1/ptm/m/n/10 method in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 249--250
+[]\OT1/pcr/m/n/10 LinkedHashMap<String, List<String>>
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 249--250
+\OT1/ptm/m/n/10 for stor-ing these group-ings is strate-gic.
+ []
+
+
+Underfull \hbox (badness 5607) in paragraph at lines 249--250
+\OT1/ptm/m/n/10 Linked-HashMap main-tains the in-ser-tion or-der,
+ []
+
+
+Underfull \hbox (badness 2012) in paragraph at lines 249--250
+\OT1/ptm/m/n/10 which is cru-cial for pre-sent-ing the data in a
+ []
+
+
+Underfull \hbox (badness 2781) in paragraph at lines 249--250
+\OT1/ptm/m/n/10 pre-dictable and or-derly man-ner, en-hanc-ing the
+ []
+
+<src/navigation bottom.png, id=548, 1031.855pt x 236.885pt>
+File: src/navigation bottom.png Graphic file (type png)
+<use src/navigation bottom.png>
+Package pdftex.def Info: src/navigation bottom.png  used on input line 273.
+(pdftex.def)             Requested size: 209.58255pt x 48.11353pt.
+
+Underfull \hbox (badness 3503) in paragraph at lines 280--282
+\OT1/ptm/m/n/10 for the over-all lay-out, in-clud-ing the Bot-tom-Nav-i-
+ []
+
+
+Underfull \hbox (badness 3646) in paragraph at lines 280--282
+\OT1/ptm/m/n/10 ga-tion-View as a con-tainer at the bot-tom of the
+ []
+
+
+Underfull \hbox (badness 1571) in paragraph at lines 280--282
+\OT1/ptm/m/n/10 app, and \OT1/pcr/m/n/10 menu/bottom_navigation_menu.xml
+ []
+
+<src/menu.png, id=549, 582.175pt x 1265.72874pt>
+File: src/menu.png Graphic file (type png)
+<use src/menu.png>
+Package pdftex.def Info: src/menu.png  used on input line 287.
+(pdftex.def)             Requested size: 122.85876pt x 267.10487pt.
+
+Underfull \hbox (badness 2865) in paragraph at lines 292--294
+\OT1/ptm/m/n/10 checks if the cur-rent frag-ment is an in-stance of
+ []
+
+[7 <./src/navigation bottom.png> <./src/menu.png>]
+<src/main activity.pdf, id=560, 401.58029pt x 86.2422pt>
+File: src/main activity.pdf Graphic file (type pdf)
+<use src/main activity.pdf>
+Package pdftex.def Info: src/main activity.pdf  used on input line 297.
+(pdftex.def)             Requested size: 361.34999pt x 77.6054pt.
+
+Underfull \hbox (badness 2680) in paragraph at lines 322--324
+\OT1/pcr/m/n/10 DatabaseHelper \OT1/ptm/m/n/10 en-cap-su-lates the com-plex-ity
+ of
+ []
+
+<src/datahelper.pdf, id=561, 281.13028pt x 206.6922pt>
+File: src/datahelper.pdf Graphic file (type pdf)
+<use src/datahelper.pdf>
+Package pdftex.def Info: src/datahelper.pdf  used on input line 326.
+(pdftex.def)             Requested size: 202.35622pt x 148.77725pt.
+[8 <./src/main activity.pdf> <./src/datahelper.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./src/datahelper.pdf): PDF inclusion: m
 ultiple pdfs with page group included in a single page
->] [4 <./src/record-sequence.pdf>]
-** WARNING: Ignoring useless \section in Appendix (line 173).
-<src/record shortcut.png, id=392, 1213.53375pt x 2562.57375pt>
+>]
+Underfull \hbox (badness 10000) in paragraph at lines 338--339
+[]\OT1/pcr/m/n/10 getWritableDatabase \OT1/ptm/m/n/10 and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 338--339
+\OT1/pcr/m/n/10 getReadableDatabase\OT1/ptm/m/n/10 , it ab-stracts the
+ []
+
+
+Underfull \hbox (badness 5431) in paragraph at lines 346--348
+[]\OT1/ptm/b/n/10 Functionality Im-ple-men-ta-tion\OT1/ptm/m/n/10 : \OT1/pcr/m/
+n/10 DatabaseHelper
+ []
+
+
+Underfull \vbox (badness 6396) has occurred while \output is active []
+
+
+Underfull \hbox (badness 3746) in paragraph at lines 360--362
+[]\OT1/ptm/b/n/10 Performance Con-sid-er-a-tions\OT1/ptm/m/n/10 : The per-for-m
+ance of
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 383--384
+\OT1/ptm/m/n/10 and \OT1/pcr/m/n/10 LibraryFragment\OT1/ptm/m/n/10 , we dis-cov
+-ered
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 383--384
+\OT1/ptm/m/n/10 that newer ver-sions of An-droid API sup-port
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 383--384
+\OT1/pcr/m/n/10 ExpandableListView\OT1/ptm/m/n/10 . This ne-ces-si-tated the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 383--384
+\OT1/ptm/m/n/10 ef-fi-cient man-age-ment. \OT1/pcr/m/n/10 ExpandableListView
+ []
+
+
+Underfull \hbox (badness 4001) in paragraph at lines 385--386
+[]\OT1/ptm/m/n/10 To ad-dress the nav-i-ga-tion is-sue, we tran-si-tioned
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 385--386
+\OT1/ptm/m/n/10 from us-ing sep-a-rate ac-tiv-i-ties to im-ple-ment-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 385--386
+\OT1/ptm/m/n/10 frag-ments. This was achieved through a
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 385--386
+\OT1/pcr/m/n/10 OnNavigationItemSelectedListener \OT1/ptm/m/n/10 and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 385--386
+\OT1/ptm/m/n/10 a \OT1/pcr/m/n/10 switchFragment(Fragment fragment)
+ []
+
+
+Underfull \hbox (badness 1810) in paragraph at lines 385--386
+\OT1/ptm/m/n/10 method. This ap-proach not only re-duced re-source
+ []
+
+[10]
+** WARNING: Ignoring useless \section in Appendix (line 422).
+<src/record shortcut.png, id=660, 1213.53375pt x 2562.57375pt>
 File: src/record shortcut.png Graphic file (type png)
 <use src/record shortcut.png>
-Package pdftex.def Info: src/record shortcut.png  used on input line 181.
+Package pdftex.def Info: src/record shortcut.png  used on input line 430.
 (pdftex.def)             Requested size: 119.76802pt x 252.94499pt.
-<src/control shortcut.png, id=393, 1213.53375pt x 2562.57375pt>
+<src/control shortcut.png, id=661, 1213.53375pt x 2562.57375pt>
 File: src/control shortcut.png Graphic file (type png)
 <use src/control shortcut.png>
-Package pdftex.def Info: src/control shortcut.png  used on input line 187.
+Package pdftex.def Info: src/control shortcut.png  used on input line 436.
+(pdftex.def)             Requested size: 119.76802pt x 252.94499pt.
+<src/history shortcut.png, id=662, 1213.53375pt x 2562.57375pt>
+File: src/history shortcut.png Graphic file (type png)
+<use src/history shortcut.png>
+Package pdftex.def Info: src/history shortcut.png  used on input line 442.
+(pdftex.def)             Requested size: 119.76802pt x 252.94499pt.
+<src/library shortcut.png, id=663, 1213.53375pt x 2562.57375pt>
+File: src/library shortcut.png Graphic file (type png)
+<use src/library shortcut.png>
+Package pdftex.def Info: src/library shortcut.png  used on input line 448.
 (pdftex.def)             Requested size: 119.76802pt x 252.94499pt.
 
 ** Conference Paper **
@@ -672,28 +891,34 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[5 <./src/record shortcut.png> <./src/control shortcut.png>] (./report.aux)
+[11 <./src/record shortcut.png> <./src/control shortcut.png> <./src/history sho
+rtcut.png> <./src/library shortcut.png>] (./report.aux)
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: B0868C1521CA37641DCE975DA98CE989;1854.
+(rerunfilecheck)             Checksum: 43E597905C1105D1887E737EFBD608DF;2494.
  ) 
 Here is how much of TeX's memory you used:
- 11593 strings out of 476175
- 182863 string characters out of 5796270
- 1869793 words of memory out of 6000000
- 31682 multiletter control sequences out of 15000+600000
+ 11762 strings out of 476175
+ 186066 string characters out of 5796270
+ 1881793 words of memory out of 6000000
+ 31816 multiletter control sequences out of 15000+600000
  551041 words of font info for 107 fonts, out of 8000000 for 9000
  1137 hyphenation exceptions out of 8191
- 72i,11n,77p,1117b,582s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,12n,77p,2024b,649s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf
--dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
-utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on report.pdf (5 pages, 2195767 bytes).
+-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
+/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on report.pdf (11 pages, 3988015 bytes).
 PDF statistics:
- 447 PDF objects out of 1000 (max. 8388607)
- 325 compressed objects within 4 object streams
- 41 named destinations out of 1000 (max. 500000)
- 161 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 730 PDF objects out of 1000 (max. 8388607)
+ 517 compressed objects within 6 object streams
+ 65 named destinations out of 1000 (max. 500000)
+ 228 words of extra memory for PDF output out of 10000 (max. 10000000)
 
